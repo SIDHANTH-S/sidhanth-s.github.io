@@ -6,3 +6,8 @@ coverage/
 *.log
 .env*
 !.env.example
+.refact/*
+.refact/buddy/runtime_queue.jsonl
+.refact/buddy/state.json
+.refact/buddy/runtime_queue.jsonl
+.refact/buddy/state.json
