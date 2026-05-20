@@ -26,7 +26,7 @@ const SOCIAL_LINKS = [
   {
     icon: FileText,
     label: "Resume",
-    href: "/resume.pdf",
+    href: "/Resume.pdf",
     sublabel: "Download PDF",
   },
 ];
@@ -151,7 +151,7 @@ const ProfileCard = () => (
               <Linkedin size={18} />
             </a>
             <a
-              href="/resume.pdf"
+              href="/Resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
               style={{ color: "rgba(255,255,255,0.4)", transition: "color 0.2s" }}
@@ -167,7 +167,7 @@ const ProfileCard = () => (
       {/* Bottom Buttons */}
       <div style={{ display: "flex", gap: 8 }}>
         <a
-          href="mailto:sidhanth@example.com"
+          href="mailto:sidhanthranka@gmail.com"
           style={{
             flex: 1,
             backgroundColor: "rgb(69, 69, 69)",
@@ -192,7 +192,7 @@ const ProfileCard = () => (
           Hire me
         </a>
         <button
-          onClick={() => navigator.clipboard.writeText('sidhanth@example.com')}
+          onClick={() => navigator.clipboard.writeText('sidhanthranka@gmail.com')}
           style={{
             flex: 1,
             backgroundColor: "rgb(46, 46, 46)",
