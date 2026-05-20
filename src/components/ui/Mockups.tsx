@@ -60,7 +60,7 @@ const WindowFrame = ({
         <div className="w-2.5 h-2.5 rounded-full bg-yellow-500/50" />
         <div className="w-2.5 h-2.5 rounded-full bg-green-500/50" />
       </div>
-      <div className="text-[10px] text-white/30 font-mono tracking-widest hidden sm:block">OPERATIONAL VIEW</div>
+      <div className="text-[10px] text-white/30 font-mono tracking-widest hidden sm:block">SIDHANTH_LAB_OS</div>
       <div className="w-8"></div>
     </div>
     <div className="flex-1 w-full relative overflow-hidden bg-transparent">
@@ -1447,24 +1447,27 @@ export const CampusVidhyaMockup = () => {
         }
 
         // Normal values
-        const yNormal = index === 0 ? -36 : index === 1 ? -16 : 0;
-        const xNormal = index === 0 ? 90 : index === 1 ? 45 : 0;
+        const yNormal = index === 0 ? -40 : index === 1 ? -20 : 0;
+        const xNormal = index === 0 ? 150 : index === 1 ? 75 : 0;
         const rotateNormal = index === 0 ? 4 : index === 1 ? 2 : 0;
-        const opacityNormal = index === 0 ? 0.35 : index === 1 ? 0.65 : 1;
+        const opacityNormal = index === 0 ? 0.70 : index === 1 ? 0.88 : 1;
 
-        // Hover values (fan out more)
+        // Hover values (fan out more and raise alignment)
         const yHover = index === 0 ? -60 : index === 1 ? -30 : 0;
-        const xHover = index === 0 ? 120 : index === 1 ? 60 : 0;
-        const rotateHover = index === 0 ? 0 : index === 1 ? 0 : 0;
-        const opacityHover = index === 0 ? 0.5 : index === 1 ? 0.8 : 1;
+        const xHover = index === 0 ? 190 : index === 1 ? 95 : 0;
+        const rotateHover = index === 0 ? 1 : index === 1 ? 0.5 : 0;
+        const opacityHover = index === 0 ? 0.90 : index === 1 ? 0.95 : 1;
 
-        const scaleInView = index === 0 ? 0.86 : index === 1 ? 0.92 : 1;
+        const scaleInView = index === 0 ? 0.72 : index === 1 ? 0.78 : 0.84;
         const zIndex = index * 10;
 
         const currentY = isHovered ? yHover : yNormal;
         const currentX = isHovered ? xHover : xNormal;
         const currentRotate = isHovered ? rotateHover : rotateNormal;
         const currentOpacity = isHovered ? opacityHover : opacityNormal;
+        const currentScale = isHovered 
+          ? (index === 0 ? 0.76 : index === 1 ? 0.82 : 0.88)
+          : scaleInView;
 
         return (
           <motion.div
@@ -1482,7 +1485,7 @@ export const CampusVidhyaMockup = () => {
             whileInView={{ 
               opacity: currentOpacity, 
               y: currentY, 
-              scale: isHovered ? scaleInView * 1.02 : scaleInView, 
+              scale: currentScale, 
               rotateZ: currentRotate, 
               x: currentX 
             }}

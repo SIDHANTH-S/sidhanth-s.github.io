@@ -73,21 +73,7 @@ export const Hero = () => {
   </a>
 
   <div className="flex items-center gap-3 ml-2 lg:ml-4">
-    <button className="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center text-white hover:bg-white/10 transition-colors">
-      <svg
-        className="w-4 h-4"
-        fill="none"
-        stroke="currentColor"
-        viewBox="0 0 24 24"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth="2"
-          d="M19 14l-7 7m0 0l-7-7m7 7V3"
-        />
-      </svg>
-    </button>
+    
 
     <a
       href="https://github.com/SIDHANTH-S"
