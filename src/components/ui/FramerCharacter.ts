@@ -1,2 +1,5 @@
-export * from "https://framerusercontent.com/modules/lV7b933Gn6WI5GolJPFn/rW08ntWJTcByMWwEiWRi/Hqy2p9d3V.js"
-export { default } from "https://framerusercontent.com/modules/lV7b933Gn6WI5GolJPFn/rW08ntWJTcByMWwEiWRi/Hqy2p9d3V.js"
+// Prefer local Framer-generated copy during development
+// @ts-ignore
+export * from "./FramerCharacter";
+// @ts-ignore
+export { default } from "./FramerCharacter";

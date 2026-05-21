@@ -60,7 +60,7 @@ const WindowFrame = ({
         <div className="w-2.5 h-2.5 rounded-full bg-yellow-500/50" />
         <div className="w-2.5 h-2.5 rounded-full bg-green-500/50" />
       </div>
-      <div className="text-[10px] text-white/30 font-mono tracking-widest hidden sm:block">SIDHANTH_LAB_OS</div>
+      <div className="text-[10px] text-white/30 font-mono tracking-widest hidden sm:block">OPERATIONAL VIEW</div>
       <div className="w-8"></div>
     </div>
     <div className="flex-1 w-full relative overflow-hidden bg-transparent">
@@ -1419,6 +1419,14 @@ export const CampusVidhyaMockup = () => {
     });
   };
 
+  const sendToBack = (id: string) => {
+    setOrder(prev => {
+      if (prev[0] === id) return prev;
+      const newOrder = prev.filter(x => x !== id);
+      return [id, ...newOrder];
+    });
+  };
+
   return (
     <div 
       className="relative w-full aspect-[4/3] flex items-center justify-center perspective-[2000px]"
@@ -1473,13 +1481,33 @@ export const CampusVidhyaMockup = () => {
           <motion.div
             key={id}
             className={cn(
-              "absolute inset-0 origin-center transition-opacity duration-300",
-              !isFront && "cursor-pointer hover:!opacity-100"
+              "absolute inset-0 origin-center cursor-grab active:cursor-grabbing select-none transition-opacity duration-300",
+              !isFront && "hover:!opacity-100"
             )}
             style={{ zIndex }}
             onClick={(e) => {
               e.stopPropagation();
               bringToFront(id);
+            }}
+            drag={true}
+            dragConstraints={{ left: 0, right: 0, top: 0, bottom: 0 }}
+            dragElastic={0.85}
+            dragTransition={{ bounceStiffness: 450, bounceDamping: 28 }}
+            whileDrag={{ 
+              scale: currentScale * 1.05,
+              zIndex: 100,
+              boxShadow: "0px 25px 50px -12px rgba(0, 0, 0, 0.4)"
+            }}
+            onDragEnd={(event, info) => {
+              const threshold = 35;
+              const isDragged = Math.abs(info.offset.x) > threshold || Math.abs(info.offset.y) > threshold;
+              if (isDragged) {
+                if (isFront) {
+                  sendToBack(id);
+                } else {
+                  bringToFront(id);
+                }
+              }
             }}
             initial={{ opacity: 0, y: yNormal + initialYOffset, scale: scaleInView, rotateZ: rotateNormal, x: xNormal }}
             whileInView={{ 

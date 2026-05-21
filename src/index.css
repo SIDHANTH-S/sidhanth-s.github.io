@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;800;900&family=Space+Grotesk:wght@400;500;600;700&family=Alex+Brush&family=Caveat:wght@500;600;700&family=Kaushan+Script&family=Permanent+Marker&display=swap");
 @import "tailwindcss";
 
 @theme {
@@ -41,3 +41,11 @@ html.lenis {
 .framer-XtgcJ.framer-v-14r8b2m.hover.framer-14r8b2m {
   overflow: visible !important;
 }
+
+/* Hide the fixed right side navigation when case study is open (identified by scroll-lock) */
+body[style*="overflow: hidden"] .fixed.right-8.top-1\/2 {
+  opacity: 0 !important;
+  pointer-events: none !important;
+  visibility: hidden !important;
+}
+

@@ -1,6 +1,12 @@
 import { motion } from "motion/react";
 
-export const FlipText = ({ text, className = "" }: { text: string; className?: string }) => {
+export const FlipText = ({
+  text,
+  className = "",
+}: {
+  text: string;
+  className?: string;
+}) => {
   const letters = Array.from(text);
 
   const container = {
@@ -44,7 +50,11 @@ export const FlipText = ({ text, className = "" }: { text: string; className?: s
       style={{ display: "inline-flex", perspective: 1000 }}
     >
       {letters.map((letter, index) => (
-        <motion.span variants={child} key={index} style={{ display: "inline-block", transformOrigin: "bottom center" }}>
+        <motion.span
+          variants={child}
+          key={index}
+          style={{ display: "inline-block", transformOrigin: "bottom center" }}
+        >
           {letter === " " ? "\u00A0" : letter}
         </motion.span>
       ))}
@@ -52,7 +62,13 @@ export const FlipText = ({ text, className = "" }: { text: string; className?: s
   );
 };
 
-export const RollingText = ({ text, className = "" }: { text: string; className?: string }) => {
+export const RollingText = ({
+  text,
+  className = "",
+}: {
+  text: string;
+  className?: string;
+}) => {
   const letters = Array.from(text);
 
   const container = {
@@ -96,7 +112,11 @@ export const RollingText = ({ text, className = "" }: { text: string; className?
       style={{ display: "inline-flex", overflow: "hidden" }}
     >
       {letters.map((letter, index) => (
-        <motion.span variants={child} key={index} style={{ display: "inline-block", transformOrigin: "bottom left" }}>
+        <motion.span
+          variants={child}
+          key={index}
+          style={{ display: "inline-block", transformOrigin: "bottom left" }}
+        >
           {letter === " " ? "\u00A0" : letter}
         </motion.span>
       ))}
@@ -107,7 +127,17 @@ export const RollingText = ({ text, className = "" }: { text: string; className?
 import { useState, useEffect } from "react";
 import { AnimatePresence } from "motion/react";
 
-export const RotatingText = ({ texts, className = "", interval = 2500, transitionDuration = 400 }: { texts: string[]; className?: string; interval?: number; transitionDuration?: number }) => {
+export const RotatingText = ({
+  texts,
+  className = "",
+  interval = 2500,
+  transitionDuration = 400,
+}: {
+  texts: string[];
+  className?: string;
+  interval?: number;
+  transitionDuration?: number;
+}) => {
   const [index, setIndex] = useState(0);
 
   useEffect(() => {
@@ -125,7 +155,10 @@ export const RotatingText = ({ texts, className = "", interval = 2500, transitio
           initial={{ opacity: 0, y: "100%", filter: "blur(4px)" }}
           animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
           exit={{ opacity: 0, y: "-100%", filter: "blur(4px)" }}
-          transition={{ duration: transitionDuration / 1000, ease: "easeInOut" }}
+          transition={{
+            duration: transitionDuration / 1000,
+            ease: "easeInOut",
+          }}
           className="col-start-1 row-start-1 whitespace-nowrap"
         >
           {texts[index]}
