@@ -8,12 +8,19 @@ import { defineConfig, Plugin } from "vite";
 function jsxRuntimeShimPlugin(): Plugin {
   const shim = `
 import * as __React__ from "react";
-const _jsx = (type, { children, ...props } = {}, key) =>
-  __React__.createElement(type, key != null ? { ...props, key } : props, children);
-const _jsxs = (type, { children, ...props } = {}, key) =>
-  Array.isArray(children)
-    ? __React__.createElement(type, key != null ? { ...props, key } : props, ...children)
-    : __React__.createElement(type, key != null ? { ...props, key } : props, children);
+const _jsx = (type, props) => {
+  if (!props) return __React__.createElement(type);
+  const { children, ...rest } = props;
+  return __React__.createElement(type, rest, children);
+};
+const _jsxs = (type, props) => {
+  if (!props) return __React__.createElement(type);
+  const { children, ...rest } = props;
+  return Array.isArray(children)
+    ? __React__.createElement(type, rest, ...children)
+    : __React__.createElement(type, rest, children);
+};
+const _Fragment = __React__.Fragment;
 `;
 
   return {
