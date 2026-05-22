@@ -40,20 +40,24 @@ export const Hero = ({ ready = true }: HeroProps) => {
           className="flex flex-col items-start gap-6 max-w-2xl"
         >
           <div className="flex flex-col gap-2">
-            <span className="font-mono text-xs text-white/40 uppercase tracking-widest mb-2">
-              SIDHANTH S. — ENGINEERING STUDENT
-            </span>
+  <h1 className="absolute left-[-9999px] top-auto w-px h-px overflow-hidden">
+  Sidhanth S — Software Engineer and AI Systems Builder
+</h1>
 
-            <h1 className="font-display text-[80px] md:text-[100px] lg:text-[112px] font-black tracking-tighter leading-[0.82] text-ink uppercase">
-              From messy
-              <br />
-              workflows
-            </h1>
+  <span className="font-mono text-xs text-white/40 uppercase tracking-widest mb-2">
+    SIDHANTH S. — ENGINEERING STUDENT
+  </span>
 
-            <p className="font-serif font-normal italic text-[52px] md:text-[64px] lg:text-[72px] text-white/35 leading-[1] tracking-tight mt-1">
-              to working software.
-            </p>
-          </div>
+  <div className="font-display text-[80px] md:text-[100px] lg:text-[112px] font-black tracking-tighter leading-[0.82] text-ink uppercase">
+    From messy
+    <br />
+    workflows
+  </div>
+
+  <p className="font-serif font-normal italic text-[52px] md:text-[64px] lg:text-[72px] text-white/35 leading-[1] tracking-tight mt-1">
+    to working software.
+  </p>
+</div>
 
           <p className="text-base md:text-lg text-white/60 leading-relaxed font-sans max-w-md mt-2 flex items-center gap-1.5 overflow-hidden h-8">
             <span className="shrink-0 text-white/60">Wide stack —</span>
