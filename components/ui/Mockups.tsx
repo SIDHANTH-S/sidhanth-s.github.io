@@ -1,3 +1,4 @@
+'use client';
 import { motion } from "motion/react";
 import React, { useState } from "react";
 import {
@@ -93,7 +94,7 @@ export const InfenixMockup = () => {
           <div className="mt-auto border-t border-white/5 pt-3">
              <div className="flex items-center gap-2 px-1">
                 <div className="w-5 h-5 rounded-full bg-blue-500/20 flex items-center justify-center text-blue-400 text-[10px] font-bold">U</div>
-                <span className="text-[10px] text-white/80 font-medium">User Profile</span>
+                <span className="text-[10px] text-white/80 font-medium">TONY STARK</span>
              </div>
           </div>
         </div>
@@ -142,7 +143,7 @@ export const InfenixMockup = () => {
                   <Sparkles size={12} className="text-white" />
                 </div>
                 <div className="bg-[#1A1A1A] border border-white/10 px-4 py-3 rounded-2xl rounded-tl-sm text-white/90 shadow-sm text-[11px] flex flex-col gap-3">
-                  <p className="leading-relaxed">Here's a simple structured learning path to start with Java:</p>
+                  <p className="leading-relaxed">Here&apos;s a simple structured learning path to start with Java:</p>
                   
                   <div className="flex flex-col gap-1.5 ml-2">
                      <span className="flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-blue-400"></div>1. Install JDK & IDE</span>

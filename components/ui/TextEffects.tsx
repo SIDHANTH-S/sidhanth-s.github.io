@@ -1,4 +1,6 @@
-import { motion } from "motion/react";
+'use client';
+import { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "motion/react";
 
 export const FlipText = ({
   text,
@@ -23,7 +25,7 @@ export const FlipText = ({
       y: 0,
       rotateX: 0,
       transition: {
-        type: "spring",
+        type: "spring" as const,
         damping: 12,
         stiffness: 200,
       },
@@ -33,7 +35,7 @@ export const FlipText = ({
       y: 40,
       rotateX: -90,
       transition: {
-        type: "spring",
+        type: "spring" as const,
         damping: 12,
         stiffness: 200,
       },
@@ -85,7 +87,7 @@ export const RollingText = ({
       y: 0,
       rotateZ: 0,
       transition: {
-        type: "spring",
+        type: "spring" as const,
         damping: 15,
         stiffness: 200,
       },
@@ -95,7 +97,7 @@ export const RollingText = ({
       y: "120%",
       rotateZ: 10,
       transition: {
-        type: "spring",
+        type: "spring" as const,
         damping: 15,
         stiffness: 200,
       },
@@ -123,9 +125,6 @@ export const RollingText = ({
     </motion.span>
   );
 };
-
-import { useState, useEffect } from "react";
-import { AnimatePresence } from "motion/react";
 
 export const RotatingText = ({
   texts,

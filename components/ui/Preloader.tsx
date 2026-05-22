@@ -1,7 +1,8 @@
+'use client';
 import React, { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
-export default function Preloader() {
+export default function Preloader({ style }: { style?: React.CSSProperties }) {
   const [show, setShow] = useState(true);
 
   useEffect(() => {
@@ -16,6 +17,7 @@ export default function Preloader() {
     <AnimatePresence>
       {show && (
         <motion.section
+          style={style}
           className="fixed inset-0 z-[9999] flex items-center justify-center overflow-hidden bg-white"
           initial={{ opacity: 1 }}
           animate={{ opacity: 1 }}

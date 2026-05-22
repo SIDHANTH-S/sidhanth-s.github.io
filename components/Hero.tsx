@@ -1,3 +1,4 @@
+'use client';
 import { motion, useScroll, useTransform } from "motion/react";
 import { Github, Linkedin } from "lucide-react";
 import { InfenixMockup, CodeToolMockup, EnergyForecastMockup } from "./ui/Mockups";
@@ -40,33 +41,32 @@ export const Hero = ({ ready = true }: HeroProps) => {
           className="flex flex-col items-start gap-6 max-w-2xl"
         >
           <div className="flex flex-col gap-2">
-  <h1 className="absolute left-[-9999px] top-auto w-px h-px overflow-hidden">
-  Sidhanth S — Software Engineer and AI Systems Builder
-</h1>
+            {/* Real visible H1 — styled as mono label, readable by crawlers */}
+            <h1 className="font-mono text-xs text-white/40 uppercase tracking-widest mb-2">
+              Sidhanth S — Software Engineer 
+            </h1>
 
-  <span className="font-mono text-xs text-white/40 uppercase tracking-widest mb-2">
-    SIDHANTH S. — ENGINEERING STUDENT
-  </span>
+            
 
-  <div className="font-display text-[80px] md:text-[100px] lg:text-[112px] font-black tracking-tighter leading-[0.82] text-ink uppercase">
-    From messy
-    <br />
-    workflows
-  </div>
+            <div className="font-display text-[52px] sm:text-[72px] md:text-[96px] lg:text-[112px] font-black tracking-tighter leading-[0.82] text-ink uppercase" aria-hidden="true">
+              From messy
+              <br />
+              workflows
+            </div>
 
-  <p className="font-serif font-normal italic text-[52px] md:text-[64px] lg:text-[72px] text-white/35 leading-[1] tracking-tight mt-1">
-    to working software.
-  </p>
-</div>
+            <p className="font-serif font-normal italic text-[32px] sm:text-[44px] md:text-[58px] lg:text-[72px] text-white/35 leading-[1] tracking-tight mt-1" aria-hidden="true">
+              to working software.
+            </p>
+          </div>
 
-          <p className="text-base md:text-lg text-white/60 leading-relaxed font-sans max-w-md mt-2 flex items-center gap-1.5 overflow-hidden h-8">
+          <div className="text-base md:text-lg text-white/60 leading-relaxed font-sans max-w-md mt-2 flex items-center gap-1.5 overflow-hidden h-8">
             <span className="shrink-0 text-white/60">Wide stack —</span>
             <RotatingText
               texts={["One builder.", "Real systems.", "Built to ship.", "End to end.", "Deep work."]}
               className="text-white/90 font-medium"
               interval={2000}
             />
-          </p>
+          </div>
 
           <div className="flex flex-wrap items-center gap-4 mt-4">
             <a
@@ -155,7 +155,7 @@ export const Hero = ({ ready = true }: HeroProps) => {
       </div>
 
       <motion.div
-        className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-muted"
+        className="absolute bottom-10 left-1/2 -translate-x-1/2 hidden sm:flex flex-col items-center gap-2 text-muted"
         style={{ opacity: headerOpacity }}
       >
         <span className="text-[10px] uppercase tracking-[0.2em] font-semibold">
