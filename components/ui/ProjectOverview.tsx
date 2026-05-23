@@ -1,5 +1,5 @@
+'use client';
 import { ArrowRight, Github, ExternalLink } from "lucide-react";
-import { motion } from "motion/react";
 
 export function ProjectOverview({
   onOpenCaseStudy,

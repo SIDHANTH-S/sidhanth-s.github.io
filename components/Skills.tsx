@@ -1,5 +1,6 @@
+'use client';
 import { motion } from "motion/react";
-import { cn } from "../lib/utils";
+import { cn } from "@/lib/utils";
 
 const ShadcnIcon = () => (
   <svg
@@ -202,10 +203,10 @@ export const Skills = () => {
   return (
     <section
       id="skills"
-      className="w-full py-32 bg-paper relative border-t border-gray-200/50"
+      className="w-full py-24 md:py-32 bg-paper relative border-t border-gray-200/50"
     >
       <div className="w-full max-w-6xl mx-auto px-6 lg:px-12">
-        <div className="mb-20">
+        <div className="mb-12 md:mb-20">
           <h2 className="font-display text-[60px] md:text-[84px] font-black tracking-tighter leading-[0.85] text-ink mb-6 uppercase">
             Toolkit
           </h2>
@@ -218,11 +219,11 @@ export const Skills = () => {
           {SKILL_GROUPS.map((group, i) => (
             <motion.div
               key={group.name}
-              className="relative min-h-[250px] p-6 rounded-2xl border border-white/5 hover:border-white/20 hover:bg-surface/80 hover:shadow-2xl transition-all duration-500 group bg-surface/30 flex flex-col"
+              className="relative p-6 rounded-2xl border border-white/5 hover:border-white/20 hover:bg-surface/80 hover:shadow-2xl transition-all duration-500 group bg-surface/30 flex flex-col"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: i * 0.1 }}
+              transition={{ delay: i * 0.06, duration: 0.5 }}
             >
               <div className="mb-6 flex items-center justify-between">
                 <div>

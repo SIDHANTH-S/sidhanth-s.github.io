@@ -1,4 +1,4 @@
-import { motion } from "motion/react";
+import { motion, type Variants } from "motion/react";
 
 type CaseStudy = {
   eyebrow: string;
@@ -261,7 +261,7 @@ export function CaseStudyContent({ projectId }: CaseStudyContentProps) {
   const resolvedId = idMap[projectId] ?? projectId;
   const data = caseStudies[resolvedId] ?? caseStudies.campusvidhya;
 
-  const containerVariants = {
+  const containerVariants: Variants = {
     hidden: { opacity: 0 },
     show: {
       opacity: 1,
@@ -272,7 +272,7 @@ export function CaseStudyContent({ projectId }: CaseStudyContentProps) {
     },
   };
 
-  const itemVariants = {
+  const itemVariants: Variants = {
     hidden: { opacity: 0, y: 20 },
     show: {
       opacity: 1,

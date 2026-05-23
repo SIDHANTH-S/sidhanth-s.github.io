@@ -1,3 +1,4 @@
+'use client';
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "motion/react";
 
@@ -56,10 +57,10 @@ export const Experience = () => {
     <section
       id="experience"
       ref={containerRef}
-      className="w-full py-32 bg-paper relative border-t border-white/10"
+      className="w-full py-24 md:py-32 bg-paper relative border-t border-white/10"
     >
       <div className="w-full max-w-4xl mx-auto px-6 lg:px-12 relative z-10">
-        <div className="mb-20">
+        <div className="mb-12 md:mb-20">
           <h2 className="font-display text-[60px] md:text-[84px] font-black tracking-tighter leading-[0.85] text-ink mb-6">
             EXPERIENCE
           </h2>
