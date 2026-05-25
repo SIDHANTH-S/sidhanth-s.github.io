@@ -1,3 +1,4 @@
+'use client';
 import React, { useRef } from "react";
 import {
   addFonts,
@@ -33,7 +34,7 @@ const Transition = ({ value, children }: any) => {
   const transition = value ?? config.transition;
   const contextValue = React.useMemo(
     () => ({ ...config, transition }),
-    [JSON.stringify(transition)],
+    [config, transition],
   );
   return (
     <MotionConfigContext.Provider value={contextValue}>
@@ -237,7 +238,18 @@ const Component = React.forwardRef(function (props: any, ref: any) {
                   >
                     {logo && (
                       typeof logo === "string" ? (
-                        <img src={logo} style={{ width: isEdxCert ? "72%" : "60%", display: "block", margin: "0 auto", zIndex: 10, pointerEvents: "none", marginBottom: badge || isEdxCert ? "15%" : "0" }} />
+                        <img
+  src={logo}
+  alt={`${SIkwxPXLT} certificate badge`}
+  style={{
+    width: isEdxCert ? "72%" : "60%",
+    display: "block",
+    margin: "0 auto",
+    zIndex: 10,
+    pointerEvents: "none",
+    marginBottom: badge || isEdxCert ? "15%" : "0",
+  }}
+/>
                       ) : (
                         <div style={{ width: isEdxCert ? "72%" : "60%", zIndex: 10, pointerEvents: "none", marginBottom: badge || isEdxCert ? "15%" : "0", display: "flex", justifyContent: "center", alignItems: "center" }}>
                           {logo}
@@ -246,15 +258,40 @@ const Component = React.forwardRef(function (props: any, ref: any) {
                     )}
                     {badge && (
                       <img
-                        src={badge}
-                        style={
-                          isEdxCert
-                            ? { position: "absolute", top: "52%", left: "50%", transform: "translate(-50%, -50%)", width: "130px", zIndex: 10, pointerEvents: "none" }
-                            : qBUJ6yCfQ === "Oracle"
-                              ? { position: "absolute", top: "55%", left: "50%", transform: "translate(-50%, -50%)", width: "170px", zIndex: 10, pointerEvents: "none" }
-                              : { position: "absolute", top: "60%", left: "50%", transform: "translate(-50%, -50%)", width: "120px", zIndex: 10, pointerEvents: "none" }
-                        }
-                      />
+  src={badge}
+  alt={`${SIkwxPXLT} certificate badge`}
+  style={
+    isEdxCert
+      ? {
+          position: "absolute",
+          top: "52%",
+          left: "50%",
+          transform: "translate(-50%, -50%)",
+          width: "130px",
+          zIndex: 10,
+          pointerEvents: "none",
+        }
+      : qBUJ6yCfQ === "Oracle"
+        ? {
+            position: "absolute",
+            top: "55%",
+            left: "50%",
+            transform: "translate(-50%, -50%)",
+            width: "170px",
+            zIndex: 10,
+            pointerEvents: "none",
+          }
+        : {
+            position: "absolute",
+            top: "60%",
+            left: "50%",
+            transform: "translate(-50%, -50%)",
+            width: "120px",
+            zIndex: 10,
+            pointerEvents: "none",
+          }
+  }
+/>
                     )}
                   </div>
                 )}
@@ -280,6 +317,7 @@ const Component = React.forwardRef(function (props: any, ref: any) {
     </LayoutGroup>
   );
 });
+Component.displayName = "BookComponent";
 
 const css = [
   "@supports (aspect-ratio: 1) { body { --framer-aspect-ratio-supported: auto; } }",
@@ -294,7 +332,7 @@ const css = [
   ".framer-2LhxO.framer-v-1eoafg6.hover .framer-18o8o6w { left: 1px; order: 0; right: -1px; }",
 ];
 
-const FramerLmy5fz81C = withCSS(Component, css, "framer-2LhxO");
+const FramerLmy5fz81C: any = withCSS(Component, css, "framer-2LhxO");
 export default FramerLmy5fz81C;
 FramerLmy5fz81C.displayName = "Book";
 FramerLmy5fz81C.defaultProps = { height: 305, width: 200 };

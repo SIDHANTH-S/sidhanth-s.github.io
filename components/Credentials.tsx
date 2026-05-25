@@ -1,8 +1,9 @@
+'use client';
 import { motion, AnimatePresence } from "motion/react";
 import { ExternalLink, Award, X, Download } from "lucide-react";
 import React, { useState } from "react";
 
-import FramerBook from "./ui/FramerBook.tsx";
+import FramerBook from "./ui/FramerBook";
 import { FlipText } from "./ui/TextEffects";
 
 export const Credentials = () => {
@@ -41,8 +42,8 @@ export const Credentials = () => {
   ];
 
   return (
-    <section id="credentials" className="w-full py-32 bg-paper relative border-t border-white/10">
-      <div className="w-full max-w-5xl mx-auto px-6 lg:px-12 flex flex-col md:flex-row items-center gap-12 mb-24">
+    <section id="credentials" className="w-full py-24 md:py-32 bg-paper relative border-t border-white/10">
+      <div className="w-full max-w-5xl mx-auto px-6 lg:px-12 flex flex-col md:flex-row items-center gap-12 mb-12 md:mb-24">
         <div className="flex-1">
           <h2 className="font-display text-[60px] md:text-[84px] font-black tracking-tighter leading-[0.85] text-ink mb-6 uppercase">
             <FlipText text="Credentials" />
@@ -57,7 +58,7 @@ export const Credentials = () => {
         </div>
 
         <div className="flex-1 w-full flex justify-center items-center min-h-[400px]">
-            <div className="w-full h-[500px] flex justify-center items-center cursor-pointer" onClick={() => setSelectedPdf('/Resume.pdf')}>
+            <div className="w-full h-[350px] md:h-[500px] flex justify-center items-center cursor-pointer" onClick={() => setSelectedPdf('/Resume.pdf')}>
             <FramerBook 
               title="Resume"
               author="SIDHANTH_S"

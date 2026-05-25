@@ -1,3 +1,4 @@
+'use client';
 import React, { useRef, useState, useCallback } from "react";
 import {
   motion,
@@ -34,7 +35,7 @@ interface CardRect {
 const BUTTER: [number, number, number, number] = [0.16, 1, 0.3, 1];
 const DURATION = 1.1;
 const SPRING_TRANSITION = {
-  type: "spring",
+  type: "spring" as const,
   mass: 0.8,
   stiffness: 100,
   damping: 15,
@@ -68,12 +69,12 @@ export const ProjectScene = ({
     offset: ["start end", "end start"],
   });
 
-const smoothProgress = useSpring(scrollYProgress, {
-  mass: 0.2,
-  stiffness: 90,
-  damping: 26,
-  restDelta: 0.001,
-});
+  const smoothProgress = useSpring(scrollYProgress, {
+    mass: 0.2,
+    stiffness: 90,
+    damping: 26,
+    restDelta: 0.001,
+  });
 
   const textY = useTransform(smoothProgress, [0.05, 0.45], [100, 0]);
   const textOpacity = useTransform(
@@ -115,7 +116,7 @@ const smoothProgress = useSpring(scrollYProgress, {
   }, []);
 
   return (
-    <section id={id} ref={containerRef} className="relative w-full h-[150vh]">
+    <section id={id} ref={containerRef} className="relative w-full h-[130vh] md:h-[150vh]">
       <div className="sticky top-0 h-screen w-full flex items-center overflow-hidden will-change-transform">
         <div className="absolute bottom-12 right-12 opacity-[0.03] pointer-events-none select-none z-0">
           <span className="font-display text-[12vw] font-black tracking-tighter leading-none uppercase">
@@ -144,6 +145,11 @@ const smoothProgress = useSpring(scrollYProgress, {
                 {title}
               </h2>
 
+              {/* sr-only h3 for SEO heading hierarchy — crawlers love this */}
+              <h3 className="sr-only">
+                {typeof title === 'string' ? title : ''} — {techStack[0]}
+              </h3>
+
               <p className="text-white/70 font-sans leading-relaxed text-sm lg:text-base">
                 {summary}
               </p>
@@ -158,6 +164,13 @@ const smoothProgress = useSpring(scrollYProgress, {
                   </span>
                 ))}
               </div>
+
+              {/* sr-only skill list for crawler keyword reinforcement */}
+              <ul className="sr-only" aria-hidden="true">
+                {techStack.map((tech) => (
+                  <li key={tech}>{tech}</li>
+                ))}
+              </ul>
 
               <div className="bg-[#1A1A1A] border border-white/10 p-4 rounded-lg mt-2 border-l-2 border-l-white">
                 <span className="block text-[10px] uppercase tracking-widest text-white/40 mb-1">
