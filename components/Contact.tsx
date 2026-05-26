@@ -426,7 +426,7 @@ export const Contact = () => {
 
         <div className="w-full mt-16 md:mt-32 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center text-white/40 font-mono text-[10px] uppercase tracking-widest gap-4">
           <span>&copy; {new Date().getFullYear()} Sidhanth S.</span>
-          <span>Designed &amp; Built with React &amp; Tailwind</span>
+          <span>Built with intent.</span>
         </div>
       </div>
     </section>
