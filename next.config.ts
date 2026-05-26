@@ -3,6 +3,8 @@ import type { NextConfig } from 'next';
 const nextConfig: NextConfig = {
   reactStrictMode: true,
 
+  output: 'export',
+
   devIndicators: false,
 
   eslint: {
@@ -14,6 +16,8 @@ const nextConfig: NextConfig = {
   },
 
   images: {
+    unoptimized: true,
+
     remotePatterns: [
       {
         protocol: 'https',

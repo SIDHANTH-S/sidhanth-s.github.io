@@ -11,7 +11,10 @@ export default function GitHubActivity() {
   useEffect(() => {
     async function fetchGitHubData() {
       try {
-        const res = await fetch("/api/github");
+        // Public contributions API (works on static hosting)
+        const res = await fetch(
+          "https://github-contributions-api.jogruber.de/v4/SIDHANTH-S"
+        );
 
         if (!res.ok) {
           throw new Error(`Failed to fetch: ${res.status}`);
@@ -23,7 +26,16 @@ export default function GitHubActivity() {
           contributions: raw.contributions.map((c: any) => ({
             date: c.date,
             count: c.count,
-            level: c.level,
+            level:
+              c.count === 0
+                ? 0
+                : c.count < 3
+                ? 1
+                : c.count < 6
+                ? 2
+                : c.count < 10
+                ? 3
+                : 4,
           })),
           total: {},
         };
