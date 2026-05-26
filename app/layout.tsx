@@ -3,9 +3,9 @@ import './globals.css';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://sidhanth-s.github.io'),
-  title: 'Sidhanth S — Software Engineer, AI Systems Builder & Full-Stack Developer',
+  title: 'Sidhanth S — Software Engineer, AI Systems Builder',
   description:
-    'CS undergraduate based in Chennai specializing in AI & Cloud Computing. Building scalable software systems across full-stack development, AI integration, workflow automation, and developer tooling.',
+    'AI & Cloud Computing student building scalable full-stack software, AI systems, automation tools, and developer platforms.',
   authors: [{ name: 'Sidhanth S' }],
   creator: 'Sidhanth S',
   publisher: 'Sidhanth S',
@@ -13,9 +13,9 @@ export const metadata: Metadata = {
     canonical: 'https://sidhanth-s.github.io',
   },
   openGraph: {
-    title: 'Sidhanth S — Software Engineer, AI Systems Builder & Full-Stack Developer',
+    title: 'Sidhanth S — Software Engineer, AI Systems Builder',
     description:
-      'CS undergraduate based in Chennai specializing in AI & Cloud Computing. Building scalable software systems across full-stack development, AI integration, workflow automation, and developer tooling.',
+      'AI & Cloud Computing student building scalable full-stack software, AI systems, automation tools, and developer platforms.',
     url: 'https://sidhanth-s.github.io',
     siteName: 'Sidhanth S',
     images: [
@@ -31,9 +31,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Sidhanth S — Software Engineer, AI Systems Builder & Full-Stack Developer',
+    title: 'Sidhanth S — Software Engineer, AI Systems Builder',
     description:
-      'CS undergraduate based in Chennai specializing in AI & Cloud Computing. Building scalable software systems across full-stack development, AI integration, workflow automation, and developer tooling.',
+      'AI & Cloud Computing student building scalable full-stack software, AI systems, automation tools, and developer platforms.',
     images: ['/og-image.png'],
   },
   robots: {
@@ -62,18 +62,14 @@ export const metadata: Metadata = {
   applicationName: 'Sidhanth S Portfolio',
   referrer: 'origin-when-cross-origin',
   keywords: [
-    'Sidhanth S',
-    'Software Engineer',
-    'AI Systems Builder',
-    'Full-Stack Developer',
-    'React Developer',
-    'Next.js Portfolio',
-    'AI Integration',
-    'Workflow Automation',
-    'Cloud Computing',
-    'Developer Tooling',
-    'Chennai',
-  ],
+  'Sidhanth S',
+  'Software Engineer',
+  'AI Systems',
+  'Full-Stack Engineering',
+  'Workflow Automation',
+  'Cloud Computing',
+  'Chennai',
+],
   formatDetection: {
     email: false,
     address: false,
@@ -92,8 +88,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         {/* GEO tags */}
         <meta name="geo.region" content="IN-TN" />
         <meta name="geo.placename" content="Chennai, Tamil Nadu, India" />
-        <meta name="geo.position" content="13.0827;80.2707" />
-        <meta name="ICBM" content="13.0827, 80.2707" />
+
 
         {/* Person JSON-LD */}
         <script
