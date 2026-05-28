@@ -1,0 +1,57 @@
+# Sidhanth S — Full Technical Profile
+
+Sidhanth S is a Computer Science Engineering student specializing in Artificial Intelligence and Cloud Computing at R.M.D. Engineering College, Chennai.
+
+Focus Areas:
+- Full-stack software engineering
+- AI-integrated applications
+- Workflow automation systems
+- Developer tooling
+- Time-series forecasting
+- Operational software platforms
+
+Projects:
+
+## CampusVidhya
+Campus workflow platform designed for academic communication, approvals, and operational coordination across students, faculty, and administration.
+
+Stack:
+React, Tailwind CSS, Role-Based Access Control, Workflow Automation
+
+## Infenix
+Domain-focused AI assistant platform with purpose-built workflows for learning, writing, and summarization.
+
+Stack:
+React, AI APIs, Prompt Workflows, Tailwind CSS
+
+## VartalapAI
+AI-assisted MSME operations platform focused on invoice digitization, OCR, procurement insights, and GST workflow support.
+
+Stack:
+OCR, NLP, Forecasting Systems, Workflow Infrastructure
+
+## CodeLens AI
+Repository intelligence system for understanding architecture, domains, dependencies, and structure in unfamiliar codebases.
+
+Stack:
+TypeScript, AST Parsing, Graph Visualization, AI Analysis
+
+## Energy Forecast
+Electricity demand and price forecasting dashboard built during Infosys Springboard internship.
+
+Stack:
+Python, Prophet, Flask, React, Time-Series Forecasting
+
+Experience:
+Infosys Springboard AI/ML Internship (2025)
+
+Certifications:
+- Oracle Cloud Infrastructure 2025 Certified Foundations Associate
+- Harvard CS50x
+- ServiceNow Certified System Administrator
+
+Profiles:
+Portfolio: https://sidhanth-s.github.io
+GitHub: https://github.com/SIDHANTH-S
+LinkedIn: https://www.linkedin.com/in/sidhanth-s
+Devpost: https://devpost.com/SIDHANTH-S

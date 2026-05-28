@@ -12,6 +12,7 @@ import { Contact } from "@/components/Contact";
 import { setLenisInstance } from "@/lib/scroll-lock";
 import Preloader from "@/components/ui/Preloader";
 import { AboutBrief } from "@/components/AboutBrief";
+import WhoIs from "@/components/WhoIs";
 import {
   InfenixMockup,
   VartalapMockup,
@@ -91,6 +92,7 @@ export default function HomeClient() {
         <Hero ready={heroReady} />
 
         <AboutBrief />
+        <WhoIs />
 
         <div id="projects" className="relative z-20 bg-paper">
           <ProjectScene

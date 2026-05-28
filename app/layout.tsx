@@ -124,7 +124,23 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               ],
               "sameAs": [
                 "https://github.com/SIDHANTH-S",
-                "https://linkedin.com/in/sidhanth-s"
+                "https://www.linkedin.com/in/sidhanth-s",
+                "https://devpost.com/SIDHANTH-S",
+                "https://www.upwork.com/freelancers/~0128ed5d9bf4fc03f3"
+              ],
+              "hasCredential": [
+                {
+                  "@type": "EducationalOccupationalCredential",
+                  "name": "Oracle Cloud Infrastructure 2025 Certified Foundations Associate"
+                },
+                {
+                  "@type": "EducationalOccupationalCredential",
+                  "name": "Harvard CS50x"
+                },
+                {
+                  "@type": "EducationalOccupationalCredential",
+                  "name": "ServiceNow Certified System Administrator"
+                }
               ]
             })
           }}
@@ -183,6 +199,38 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               ]
             })
           }}
+        />
+
+        {/* ProfilePage Schema */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "ProfilePage",
+              "dateCreated": "2026-05-27",
+              "description":
+                "Portfolio of Sidhanth S — AI systems builder, full-stack developer, and Computer Science Engineering student based in Chennai, India.",
+              "mainEntity": {
+                "@type": "Person",
+                "name": "Sidhanth S",
+                "url": "https://sidhanth-s.github.io/",
+                "jobTitle": "AI Systems Builder & Full-Stack Developer",
+                "sameAs": [
+                  "https://github.com/SIDHANTH-S",
+                  "https://www.linkedin.com/in/sidhanth-s",
+                  "https://devpost.com/SIDHANTH-S",
+                  "https://www.upwork.com/freelancers/~0128ed5d9bf4fc03f3"
+                ]
+              }
+            })
+          }}
+        />
+
+        <link
+          rel="llms"
+          href="https://sidhanth-s.github.io/llms.txt"
+          type="text/plain"
         />
 
         <link rel="preconnect" href="https://fonts.googleapis.com" />

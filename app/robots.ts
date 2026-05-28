@@ -25,6 +25,14 @@ export default function robots(): MetadataRoute.Robots {
         userAgent: 'Bingbot',
         allow: '/',
       },
+      {
+        userAgent: 'anthropic-ai',
+        allow: '/',
+      },
+      {
+        userAgent: 'CCBot',
+        allow: '/',
+      },
     ],
     sitemap: 'https://sidhanth-s.github.io/sitemap.xml',
   };
