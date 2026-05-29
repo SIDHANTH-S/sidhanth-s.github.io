@@ -97,10 +97,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "Person",
+              "@id": "https://sidhanth-s.github.io/#person",
               "name": "Sidhanth S",
               "alternateName": ["Sidhanth"],
               "url": "https://sidhanth-s.github.io",
-              "image": "https://sidhanth-s.github.io/Potrait.jpg",
+              "image": "https://sidhanth-s.github.io/Portrait.jpg",
               "jobTitle": "Software Engineer & AI Systems Builder",
               "description": "CS undergraduate based in Chennai specializing in AI and Cloud Computing, building scalable software systems.",
               "address": {
@@ -125,8 +126,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               "sameAs": [
                 "https://github.com/SIDHANTH-S",
                 "https://www.linkedin.com/in/sidhanth-s",
-                "https://devpost.com/SIDHANTH-S",
-                "https://www.upwork.com/freelancers/~0128ed5d9bf4fc03f3"
+                "https://devpost.com/SIDHANTH-S"
               ],
               "hasCredential": [
                 {
@@ -153,12 +153,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "WebSite",
+              "@id": "https://sidhanth-s.github.io/#website",
               "name": "Sidhanth S",
               "url": "https://sidhanth-s.github.io",
               "description": "Software Engineer, AI Systems Builder & Full-Stack Developer based in Chennai, India.",
               "author": {
-                "@type": "Person",
-                "name": "Sidhanth S"
+                "@id": "https://sidhanth-s.github.io/#person"
               }
             })
           }}
@@ -208,20 +208,15 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "ProfilePage",
-              "dateCreated": "2026-05-27",
+              "dateCreated": "2025-09-01T00:00:00Z",
+              "dateModified": "2026-05-29T00:00:00Z",
               "description":
                 "Portfolio of Sidhanth S — AI systems builder, full-stack developer, and Computer Science Engineering student based in Chennai, India.",
+              "isPartOf": {
+                "@id": "https://sidhanth-s.github.io/#website"
+              },
               "mainEntity": {
-                "@type": "Person",
-                "name": "Sidhanth S",
-                "url": "https://sidhanth-s.github.io/",
-                "jobTitle": "AI Systems Builder & Full-Stack Developer",
-                "sameAs": [
-                  "https://github.com/SIDHANTH-S",
-                  "https://www.linkedin.com/in/sidhanth-s",
-                  "https://devpost.com/SIDHANTH-S",
-                  "https://www.upwork.com/freelancers/~0128ed5d9bf4fc03f3"
-                ]
+                "@id": "https://sidhanth-s.github.io/#person"
               }
             })
           }}

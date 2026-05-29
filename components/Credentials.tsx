@@ -62,7 +62,7 @@ export const Credentials = () => {
             <FramerBook 
               title="Resume"
               author="SIDHANTH_S"
-              image="/Potrait.jpg"
+              image="/Portrait.jpg"
               style={{ width: "100%", height: "100%" }} 
             />
           </div>
