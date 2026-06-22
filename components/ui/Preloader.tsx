@@ -53,7 +53,7 @@ export default function Preloader({ style }: { style?: React.CSSProperties }) {
                 rotate: 0,
               }}
               transition={{
-                delay: 1.3,
+                delay: 0.1,
                 duration: 1.8,
                 ease: [0.8, 0.2, 0.2, 0.8],
               }}

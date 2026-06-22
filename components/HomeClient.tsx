@@ -20,6 +20,9 @@ import {
   CodeToolMockup,
   EnergyForecastMockup,
 } from "@/components/ui/Mockups";
+import Link from "next/link";
+import { VerticalNavDots } from "@/components/VerticalNavDots";
+import { MobileNav } from "@/components/MobileNav";
 
 export default function HomeClient() {
   const [isPreloaderActive, setIsPreloaderActive] = useState(true);
@@ -87,11 +90,19 @@ export default function HomeClient() {
       </div>
 
       <ScrollProgress />
+      <VerticalNavDots />
+      <MobileNav />
 
       <main>
         <Hero ready={heroReady} />
 
         <AboutBrief />
+        <div className="w-full text-center pb-24 bg-paper relative z-20">
+           <Link href="/about" className="text-white font-mono text-xs tracking-widest uppercase border border-white/20 px-6 py-3 rounded-full hover:bg-white/10 transition-colors">
+              View About Page →
+           </Link>
+        </div>
+
         <WhoIs />
 
         <div id="projects" className="relative z-20 bg-paper">
@@ -150,11 +161,26 @@ export default function HomeClient() {
             layout="right"
             mockup={<EnergyForecastMockup />}
           />
+          <div className="w-full text-center pb-24 pt-8 bg-paper relative z-20">
+             <Link href="/projects" className="text-white font-mono text-xs tracking-widest uppercase border border-white/20 px-6 py-3 rounded-full hover:bg-white/10 transition-colors">
+                View All Projects →
+             </Link>
+          </div>
         </div>
         <GitHubActivity />
         <Experience />
+        <div className="w-full text-center pb-24 bg-paper relative z-20">
+             <Link href="/experience" className="text-white font-mono text-xs tracking-widest uppercase border border-white/20 px-6 py-3 rounded-full hover:bg-white/10 transition-colors">
+                View Experience Details →
+             </Link>
+        </div>
         <Skills />
         <Credentials />
+        <div className="w-full text-center pb-24 bg-paper relative z-20">
+             <Link href="/certifications" className="text-white font-mono text-xs tracking-widest uppercase border border-white/20 px-6 py-3 rounded-full hover:bg-white/10 transition-colors">
+                View Certifications →
+             </Link>
+        </div>
         <Contact />
       </main>
     </div>

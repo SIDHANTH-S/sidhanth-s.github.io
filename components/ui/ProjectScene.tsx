@@ -12,6 +12,7 @@ import { ArrowRight, Github, ExternalLink, X } from "lucide-react";
 import { cn } from "../../lib/utils";
 import { CaseStudyContent } from "../CaseStudyContent";
 import { lockScroll, unlockScroll } from "../../lib/scroll-lock";
+import Link from "next/link";
 
 interface ProjectSceneProps {
   id: string;
@@ -130,7 +131,7 @@ export const ProjectScene = ({
               style={{ y: textY, opacity: originRect ? 0 : textOpacity }}
               transition={{ duration: 0.4 }}
               className={cn(
-                "flex flex-col gap-6 col-span-1 lg:col-span-4",
+                "flex flex-col gap-6 col-span-1 lg:col-span-4 relative z-30",
                 layout === "right" ? "lg:order-1" : "lg:order-2",
               )}
             >
@@ -181,7 +182,7 @@ export const ProjectScene = ({
                 </span>
               </div>
 
-              <div className="flex items-center gap-4 mt-4">
+              <div className="flex flex-wrap items-center gap-4 mt-4">
                 <button
                   onClick={handleOpen}
                   className="bg-white text-black px-6 py-3 rounded-full font-bold uppercase tracking-widest text-[10px] hover:bg-white/90 transition-colors flex items-center gap-2 group"
@@ -196,9 +197,13 @@ export const ProjectScene = ({
                   <button className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center text-white/70 hover:text-white hover:bg-white/10 transition-colors">
                     <Github size={16} />
                   </button>
-                  <button className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center text-white/70 hover:text-white hover:bg-white/10 transition-colors">
+                  <Link 
+                    href={`/projects/${id}`}
+                    className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center text-white/70 hover:text-white hover:bg-white/10 transition-colors"
+                    title="View Dedicated Project Page"
+                  >
                     <ExternalLink size={16} />
-                  </button>
+                  </Link>
                 </div>
               </div>
             </motion.div>

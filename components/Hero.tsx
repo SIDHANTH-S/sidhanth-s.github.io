@@ -21,7 +21,7 @@ export const Hero = ({ ready = true }: HeroProps) => {
   return (
     <section
       id="intro"
-      className="relative w-full min-h-[100vh] flex flex-col justify-center overflow-hidden bg-cover bg-center pt-20 lg:pt-0"
+      className="relative w-full min-h-[100vh] flex flex-col justify-center overflow-hidden bg-cover bg-center py-12 lg:py-16"
     >
       <div className="absolute inset-0 bg-paper pointer-events-none" />
 
@@ -48,14 +48,20 @@ export const Hero = ({ ready = true }: HeroProps) => {
 
             
 
-            <div className="font-display text-[52px] sm:text-[72px] md:text-[96px] lg:text-[112px] font-black tracking-tighter leading-[0.82] text-ink uppercase" aria-hidden="true">
+            <div className="font-display text-[52px] sm:text-[72px] md:text-[80px] lg:text-[96px] xl:text-[112px] font-black tracking-tighter leading-[0.82] text-ink uppercase" aria-hidden="true">
               From messy
               <br />
               workflows
             </div>
 
-            <p className="font-serif font-normal italic text-[32px] sm:text-[44px] md:text-[58px] lg:text-[72px] text-white/35 leading-[1] tracking-tight mt-1" aria-hidden="true">
+            <p className="font-serif font-normal italic text-[32px] sm:text-[44px] md:text-[50px] lg:text-[60px] xl:text-[72px] text-white/35 leading-[1] tracking-tight mt-1" aria-hidden="true">
               to working software.
+            </p>
+          </div>
+
+          <div className="text-base md:text-lg text-white/80 leading-relaxed font-sans max-w-lg mt-2">
+            <p>
+              <strong>Sidhanth S</strong> is a Software Engineer, AI Systems Builder, and Full Stack Developer based in Chennai, India. He builds workflow automation systems, AI-powered platforms, developer tools, and operational software products.
             </p>
           </div>
 
