@@ -1,7 +1,11 @@
 import type { Metadata } from 'next';
+import { Inter, Space_Grotesk, Kaushan_Script } from 'next/font/google';
 import './globals.css';
 import { BackButton } from '@/components/BackButton';
 
+const inter = Inter({ subsets: ['latin'], variable: '--font-sans', display: 'swap' });
+const spaceGrotesk = Space_Grotesk({ subsets: ['latin'], variable: '--font-display', display: 'swap' });
+const kaushanScript = Kaushan_Script({ subsets: ['latin'], weight: '400', variable: '--font-kaushan', display: 'swap' });
 export const metadata: Metadata = {
   metadataBase: new URL('https://sidhanth-s.github.io'),
   title: 'Sidhanth S — Software Engineer',
@@ -227,11 +231,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           href="https://sidhanth-s.github.io/llms.txt"
           type="text/plain"
         />
-
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
       </head>
-      <body>
+      <body className={`${inter.variable} ${spaceGrotesk.variable} ${kaushanScript.variable}`}>
         <BackButton />
         {children}
       </body>

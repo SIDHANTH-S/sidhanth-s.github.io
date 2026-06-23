@@ -79,7 +79,7 @@ export default function Preloader({ style }: { style?: React.CSSProperties }) {
 
               <span
                 style={{
-                  fontFamily: '"Kaushan Script", cursive',
+                  fontFamily: 'var(--font-kaushan), cursive',
                   fontSize: "clamp(3.5rem, 12vw, 10rem)",
                   color: "#2563eb",
                   position: "absolute",

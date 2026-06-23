@@ -8,8 +8,10 @@ import DocumentCard from "./ui/DocumentCard";
 const DocumentCardTyped = DocumentCard as React.FC<any>;
 import { FlipText } from "./ui/TextEffects";
 
+
 export const Credentials = () => {
   const [selectedPdf, setSelectedPdf] = useState<string | null>(null);
+  const [loadedVideos, setLoadedVideos] = useState<number[]>([]);
 
   React.useEffect(() => {
     const handleOpenPdf = (e: any) => setSelectedPdf(e.detail);
@@ -21,8 +23,8 @@ export const Credentials = () => {
     {
       title: "ServiceNow Certified Application Developer",
       author: "ServiceNow",
-      logo: "/SERVICENOWLOGO.svg",
-      badge: "/CAD.png",
+      logo: <img src="/SERVICENOWLOGO.svg" alt="ServiceNow" style={{width:"100%",height:"100%",objectFit:"contain"}} />,
+      badge: "/CAD.webp",
       innerVideo: "/CAD-gif.webm",
       coverTitle: "ServiceNow CAD",
       coverSubtitle: "Certified Application Developer",
@@ -41,8 +43,8 @@ export const Credentials = () => {
     {
       title: "ServiceNow Certified System Administrator",
       author: "ServiceNow",
-      logo: "/SERVICENOWLOGO.svg",
-      badge: "/CSA.png",
+      logo: <img src="/SERVICENOWLOGO.svg" alt="ServiceNow" style={{width:"100%",height:"100%",objectFit:"contain"}} />,
+      badge: "/CSA.webp",
       innerVideo: "/CSA-gif.webm",
       coverTitle: "ServiceNow CSA",
       coverSubtitle: "Certified System Administrator",
@@ -70,7 +72,7 @@ export const Credentials = () => {
         </div>
       ),
       // @ts-ignore
-      badge: "/ORACLE.png",
+      badge: "/ORACLE.webp",
       coverTitle: "Oracle OCI",
       coverSubtitle: "Cloud Infrastructure Foundations",
       innerContent: (
@@ -89,7 +91,7 @@ export const Credentials = () => {
     {
       title: "INTRODUCTION to CS50",
       author: "Harvard University",
-      logo: "/edx-logo-elm.svg",
+      logo: <img src="/edx-logo-elm.svg" alt="Harvard edX" style={{width:"100%",height:"100%",objectFit:"contain"}} />,
       badge: "/HarvardUniversity.svg",
       coverTitle: "Harvard edX",
       coverSubtitle: "CS50x",
@@ -135,35 +137,51 @@ export const Credentials = () => {
       </div>
 
       <div className="w-full max-w-[1400px] mx-auto px-4 lg:px-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-16 justify-items-center">
-        {certifications.map((cert, index) => (
-          <motion.div
-            key={index}
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ delay: index * 0.15, duration: 0.6 }}
-            viewport={{ once: true }}
-            className="flex flex-col items-center justify-center relative w-full h-[280px] sm:h-[340px] hover:z-50"
-          >
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 scale-[0.6] sm:scale-[0.7] lg:scale-[0.6] xl:scale-[0.7] origin-center transition-transform duration-300 hover:scale-[0.65] sm:hover:scale-[0.75] lg:hover:scale-[0.65] xl:hover:scale-[0.75]">
-              <div className="block">
-                {/* @ts-ignore - DocumentCard type lacks style prop */}
-                <DocumentCardTyped 
-                  layoutId={`cert-card-${index}`} 
-                  coverTitle={cert.coverTitle}
-                  coverSubtitle={cert.coverSubtitle}
-                  coverColor={cert.coverColor} 
-                  backColor={cert.backColor} 
-                  logo={cert.logo} 
-                  badge={cert.badge} 
-                  badgeScale={cert.badgeScale}
-                  innerVideo={cert.innerVideo} 
-                  innerContent={cert.innerContent}
-                  pdfLink={cert.pdfLink}
-                />
+        {certifications.map((cert, index) => {
+          const isVideoLoaded = loadedVideos.includes(index);
+          const videoElement = cert.innerVideo ? (
+            isVideoLoaded ? (
+              <video src={cert.innerVideo} autoPlay loop muted playsInline style={{ height: "100px", width: "auto", margin: "0 auto", borderRadius: "8px", objectFit: "contain", marginBottom: "12px", display: "block" }} />
+            ) : (
+              <div style={{ height: "100px", width: "100px", margin: "0 auto", borderRadius: "8px", background: "rgba(0,0,0,0.05)", border: "1px dashed rgba(0,0,0,0.2)", marginBottom: "12px" }} />
+            )
+          ) : undefined;
+
+          return (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: index * 0.15, duration: 0.6 }}
+              viewport={{ once: true }}
+              className="flex flex-col items-center justify-center relative w-full h-[280px] sm:h-[340px] hover:z-50 cursor-pointer"
+              onClick={() => {
+                if (!isVideoLoaded && cert.innerVideo) {
+                  setLoadedVideos((prev) => [...prev, index]);
+                }
+              }}
+            >
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 scale-[0.6] sm:scale-[0.7] lg:scale-[0.6] xl:scale-[0.7] origin-center transition-transform duration-300 hover:scale-[0.65] sm:hover:scale-[0.75] lg:hover:scale-[0.65] xl:hover:scale-[0.75]">
+                <div className="block">
+                  {/* @ts-ignore - DocumentCard type lacks style prop */}
+                  <DocumentCardTyped 
+                    layoutId={`cert-card-${index}`} 
+                    coverTitle={cert.coverTitle}
+                    coverSubtitle={cert.coverSubtitle}
+                    coverColor={cert.coverColor} 
+                    backColor={cert.backColor} 
+                    logo={cert.logo} 
+                    badge={cert.badge} 
+                    badgeScale={cert.badgeScale}
+                    innerVideo={videoElement} 
+                    innerContent={cert.innerContent}
+                    pdfLink={cert.pdfLink}
+                  />
+                </div>
               </div>
-            </div>
-          </motion.div>
-        ))}
+            </motion.div>
+          );
+        })}
       </div>
 
       <AnimatePresence>
