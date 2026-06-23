@@ -4,7 +4,7 @@ import { Credentials } from "@/components/Credentials";
 
 export const metadata = constructMetadata({
   title: "Certifications | Sidhanth S",
-  description: "Verified milestones, certifications, and academic achievements.",
+  description: "Software Engineer Sidhanth S - Verified certifications, technical credentials, and professional achievements.",
   url: "https://sidhanth-s.github.io/certifications",
 });
 

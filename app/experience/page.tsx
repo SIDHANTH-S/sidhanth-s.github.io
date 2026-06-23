@@ -6,7 +6,7 @@ import GitHubActivity from "@/components/GitHubActivity";
 
 export const metadata = constructMetadata({
   title: "Experience | Sidhanth S",
-  description: "Work history, technical skills, and GitHub contributions of Sidhanth S.",
+  description: "Software Engineer Sidhanth S - Work history, technical skills, and GitHub contributions in full-stack development and system building.",
   url: "https://sidhanth-s.github.io/experience",
 });
 
@@ -21,6 +21,19 @@ export default function ExperiencePage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "CampusVidhya",
+            "founder": {
+              "@id": "https://sidhanth-s.github.io/#person"
+            }
+          })
+        }}
       />
       
       <div className="w-full max-w-6xl mx-auto px-6 lg:px-12 pt-32">

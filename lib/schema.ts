@@ -18,6 +18,11 @@ export function generateArticleSchema({
   url,
   datePublished = "2025-01-01T00:00:00Z",
   dateModified = new Date().toISOString(),
+  author = {
+    "@type": "Person",
+    "@id": "https://sidhanth-s.github.io/#person",
+    "name": "Sidhanth S"
+  }
 }: {
   headline: string;
   description: string;
@@ -25,6 +30,7 @@ export function generateArticleSchema({
   url: string;
   datePublished?: string;
   dateModified?: string;
+  author?: any;
 }) {
   return {
     "@context": "https://schema.org",
@@ -36,10 +42,9 @@ export function generateArticleSchema({
     "headline": headline,
     "description": description,
     "image": image,
-    "author": {
-      "@type": "Person",
-      "name": "Sidhanth S",
-      "url": "https://sidhanth-s.github.io",
+    "author": author,
+    "isPartOf": {
+      "@id": "https://sidhanth-s.github.io/#website"
     },
     "publisher": {
       "@type": "Organization",
