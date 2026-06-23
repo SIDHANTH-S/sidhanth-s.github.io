@@ -21,11 +21,7 @@ const EnergyForecastMockup = dynamic(() => import("./ui/Mockups").then(mod => mo
   ssr: false
 });
 
-interface HeroProps {
-  ready?: boolean;
-}
-
-export const Hero = ({ ready = true }: HeroProps) => {
+export const Hero = () => {
   const { scrollY } = useScroll();
 
   const headerY = useTransform(scrollY, [0, 500], [0, -100]);
@@ -134,11 +130,7 @@ export const Hero = ({ ready = true }: HeroProps) => {
               className="absolute w-[450px] pointer-events-none"
               style={{ y: mockup3Y, zIndex: 1 }}
               initial={{ opacity: 0, scale: 0.9, rotateX: 10, rotateY: -15, rotateZ: -5, x: 250, z: -200 }}
-              animate={
-                ready
-                  ? { opacity: 0.4, scale: 1, rotateX: 10, rotateY: -15, rotateZ: -5, x: 250, z: -200 }
-                  : { opacity: 0, scale: 0.9, rotateX: 10, rotateY: -15, rotateZ: -5, x: 250, z: -200 }
-              }
+              animate={{ opacity: 0.4, scale: 1, rotateX: 10, rotateY: -15, rotateZ: -5, x: 250, z: -200 }}
               transition={{ duration: 1, delay: 0.4 }}
             >
               <EnergyForecastMockup />
@@ -149,11 +141,7 @@ export const Hero = ({ ready = true }: HeroProps) => {
               className="absolute w-[480px] pointer-events-none shadow-2xl"
               style={{ y: mockup2Y, zIndex: 2 }}
               initial={{ opacity: 0, scale: 0.8, rotateX: 5, rotateY: -5, rotateZ: 2, x: 190, z: -100 }}
-              animate={
-                ready
-                  ? { opacity: 0.7, scale: 1, rotateX: 5, rotateY: -5, rotateZ: 2, x: 190, z: -100 }
-                  : { opacity: 0, scale: 0.8, rotateX: 5, rotateY: -5, rotateZ: 2, x: 190, z: -100 }
-              }
+              animate={{ opacity: 0.7, scale: 1, rotateX: 5, rotateY: -5, rotateZ: 2, x: 190, z: -100 }}
               transition={{ duration: 1, delay: 0.2 }}
             >
               <CodeToolMockup />
@@ -164,11 +152,7 @@ export const Hero = ({ ready = true }: HeroProps) => {
               className="absolute w-[520px] shadow-2xl"
               style={{ y: mockup1Y, zIndex: 3 }}
               initial={{ opacity: 0, scale: 0.7, rotateX: -5, rotateY: 10, rotateZ: -2, x: 110, z: 0 }}
-              animate={
-                ready
-                  ? { opacity: 1, scale: 1, rotateX: -5, rotateY: 10, rotateZ: -2, x: 110, z: 0 }
-                  : { opacity: 0, scale: 0.7, rotateX: -5, rotateY: 10, rotateZ: -2, x: 110, z: 0 }
-              }
+              animate={{ opacity: 1, scale: 1, rotateX: -5, rotateY: 10, rotateZ: -2, x: 110, z: 0 }}
               transition={{ duration: 1 }}
             >
               <InfenixMockup />
