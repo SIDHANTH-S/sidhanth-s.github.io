@@ -187,7 +187,7 @@ const Component = React.forwardRef(function (props: any, ref: any) {
                     style={{ position: "absolute", inset: 0, backgroundColor: "#e8e4dc", overflow: "hidden" }}
                   >
                     {/* Portrait */}
-                    <div style={{ position: "absolute", inset: 0, backgroundImage: `url(${imgSrc})`, backgroundSize: "cover", backgroundPosition: "center 0%", backgroundRepeat: "no-repeat", zIndex: 0 }} />
+                    <img src={imgSrc} loading="lazy" alt="Portrait" style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", objectPosition: "center 0%", zIndex: 0 }} />
                     {/* Gradient */}
                     <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to bottom, transparent 40%, rgba(10,10,20,0.88) 100%)", zIndex: 1 }} />
                     {/* ESTD */}
