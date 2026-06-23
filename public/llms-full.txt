@@ -1,57 +1,117 @@
-# Sidhanth S — Full Technical Profile
+# Sidhanth S - Full Technical Profile
 
-Sidhanth S is a Computer Science Engineering student specializing in Artificial Intelligence and Cloud Computing at R.M.D. Engineering College, Chennai.
+Sidhanth S is a Software Engineer and Full-Stack Developer based in Chennai, India.
 
-Focus Areas:
-- Full-stack software engineering
-- AI-integrated applications
-- Workflow automation systems
-- Developer tooling
-- Time-series forecasting
-- Operational software platforms
+He builds software products, workflow platforms, developer tools, and modern web applications.
 
-Projects:
+## Expertise
 
-## CampusVidhya
-Campus workflow platform designed for academic communication, approvals, and operational coordination across students, faculty, and administration.
+- Software Engineering
+- Full-Stack Development
+- React
+- Next.js
+- Java
+- Python
+- Workflow Automation
+- Developer Tooling
+- Artificial Intelligence
+- Machine Learning
 
-Stack:
-React, Tailwind CSS, Role-Based Access Control, Workflow Automation
+## Projects
 
-## Infenix
-Domain-focused AI assistant platform with purpose-built workflows for learning, writing, and summarization.
+### CampusVidhya
 
-Stack:
-React, AI APIs, Prompt Workflows, Tailwind CSS
+Academic workflow platform designed to improve communication, approvals, and operational coordination across students, faculty, and administrators.
 
-## VartalapAI
-AI-assisted MSME operations platform focused on invoice digitization, OCR, procurement insights, and GST workflow support.
+Technologies:
 
-Stack:
-OCR, NLP, Forecasting Systems, Workflow Infrastructure
+- React
+- Tailwind CSS
+- Workflow Automation
+- Role-Based Access Control
 
-## CodeLens AI
-Repository intelligence system for understanding architecture, domains, dependencies, and structure in unfamiliar codebases.
+Project:
+https://sidhanth-s.github.io/projects/campusvidhya
 
-Stack:
-TypeScript, AST Parsing, Graph Visualization, AI Analysis
+### Infenix
 
-## Energy Forecast
-Electricity demand and price forecasting dashboard built during Infosys Springboard internship.
+AI-assisted learning platform designed for structured technical learning and knowledge workflows.
 
-Stack:
-Python, Prophet, Flask, React, Time-Series Forecasting
+Technologies:
 
-Experience:
-Infosys Springboard AI/ML Internship (2025)
+- React
+- Prompt Workflows
+- AI APIs
+- Tailwind CSS
 
-Certifications:
+Project:
+https://sidhanth-s.github.io/projects/infenix
+
+### VartalapAI
+
+AI-assisted business intelligence platform focused on OCR, document processing, forecasting, and operational workflows for MSMEs.
+
+Technologies:
+
+- OCR
+- NLP
+- Forecasting Systems
+- Workflow Infrastructure
+
+Project:
+https://sidhanth-s.github.io/projects/vartalapai
+
+### CodeLens AI
+
+Repository intelligence platform designed to help developers understand unfamiliar codebases through architecture and dependency analysis.
+
+Technologies:
+
+- TypeScript
+- AST Parsing
+- Graph Visualization
+- AI Analysis
+
+Project:
+https://sidhanth-s.github.io/projects/codelens-ai
+
+### Energy Forecast Console
+
+Electricity demand and price forecasting dashboard developed during the Infosys Springboard AI/ML Internship.
+
+Technologies:
+
+- Python
+- Prophet
+- Flask
+- React
+- Time-Series Forecasting
+
+Project:
+https://sidhanth-s.github.io/projects/energy-forecast
+
+## Experience
+
+### Infosys Springboard AI/ML Internship
+
+Built forecasting systems, data pipelines, dashboards, and machine learning workflows focused on electricity demand prediction and visualization.
+
+## Certifications
+
 - Oracle Cloud Infrastructure 2025 Certified Foundations Associate
 - Harvard CS50x
 - ServiceNow Certified System Administrator
 
-Profiles:
-Portfolio: https://sidhanth-s.github.io
-GitHub: https://github.com/SIDHANTH-S
-LinkedIn: https://www.linkedin.com/in/sidhanth-s
-Devpost: https://devpost.com/SIDHANTH-S
+## Profiles
+
+Portfolio:
+https://sidhanth-s.github.io
+
+GitHub:
+https://github.com/SIDHANTH-S
+
+LinkedIn:
+https://www.linkedin.com/in/sidhanth-s
+
+Devpost:
+https://devpost.com/SIDHANTH-S

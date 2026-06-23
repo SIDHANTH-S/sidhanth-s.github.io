@@ -2,21 +2,33 @@
 
 > Software Engineer based in Chennai, India
 
-Website: https://sidhanth-s.github.io
+## Website
+
+- [Homepage](https://sidhanth-s.github.io)
 
 ## Pages
 
-* About: https://sidhanth-s.github.io/about
-* Projects: https://sidhanth-s.github.io/projects
-* Experience: https://sidhanth-s.github.io/experience
-* Certifications: https://sidhanth-s.github.io/certifications
+- [About](https://sidhanth-s.github.io/about)
+- [Projects](https://sidhanth-s.github.io/projects)
+- [Experience](https://sidhanth-s.github.io/experience)
+- [Certifications](https://sidhanth-s.github.io/certifications)
 
 ## Summary
 
-Sidhanth S is a Software Engineer and Full-Stack Developer based in Chennai, India. He builds software products, developer tools, workflow platforms, and modern web applications.
+Sidhanth S is a Software Engineer based in Chennai, India.
+
+He builds software products, workflow platforms, developer tools, and modern web applications.
+
+## Projects
+
+- CampusVidhya
+- Infenix
+- CodeLens AI
+- VartalapAI
+- Energy Forecast Console
 
 ## Profiles
 
-* GitHub: https://github.com/SIDHANTH-S
-* LinkedIn: https://www.linkedin.com/in/sidhanth-s
-* Devpost: https://devpost.com/SIDHANTH-S
+- [GitHub](https://github.com/SIDHANTH-S)
+- [LinkedIn](https://www.linkedin.com/in/sidhanth-s)
+- [Devpost](https://devpost.com/SIDHANTH-S)
