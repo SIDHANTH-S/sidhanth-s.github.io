@@ -100,9 +100,9 @@ export function VerticalNavDots() {
           {!expanded ? (
             <motion.div
               key="collapsed"
-              initial={{ opacity: 0, filter: "blur(4px)" }}
-              animate={{ opacity: 1, filter: "blur(0px)" }}
-              exit={{ opacity: 0, filter: "blur(4px)" }}
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.9 }}
               transition={{ duration: 0.2 }}
               className="w-11 h-11 flex items-center justify-center cursor-pointer"
             >
@@ -111,9 +111,9 @@ export function VerticalNavDots() {
           ) : (
             <motion.div
               key="expanded"
-              initial={{ opacity: 0, filter: "blur(4px)" }}
-              animate={{ opacity: 1, filter: "blur(0px)" }}
-              exit={{ opacity: 0, filter: "blur(4px)" }}
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.9 }}
               transition={{ duration: 0.2, delay: 0.05 }}
               className="flex flex-col gap-3.5 w-[160px] p-4"
             >

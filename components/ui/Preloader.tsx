@@ -23,7 +23,6 @@ export default function Preloader({ style }: { style?: React.CSSProperties }) {
           animate={{ opacity: 1 }}
           exit={{
             opacity: 0,
-            filter: "blur(8px)",
             y: -1400,
           }}
           transition={{
@@ -33,8 +32,8 @@ export default function Preloader({ style }: { style?: React.CSSProperties }) {
         >
           <motion.div
             className="relative flex h-full w-full items-center justify-center"
-            initial={{ filter: "blur(0px)", opacity: 1 }}
-            exit={{ filter: "blur(8px)", opacity: 0 }}
+            initial={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
             transition={{
               duration: 1,
               ease: [0.96, -0.02, 0.38, 1.01],

@@ -125,7 +125,7 @@ export const InfenixMockup = () => {
             <motion.div 
               className="self-end bg-[#1A1A1A] border border-white/10 px-4 py-2.5 rounded-2xl rounded-tr-sm text-[11px] max-w-[80%] text-white/90 shadow-sm"
               initial={{ opacity: 0, y: 10 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              animate={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
             >
               Hi, help me to learn Java!
@@ -134,7 +134,7 @@ export const InfenixMockup = () => {
             <motion.div 
               className="self-start flex flex-col gap-3 max-w-[90%]"
               initial={{ opacity: 0, scale: 0.98 }}
-              whileInView={{ opacity: 1, scale: 1 }}
+              animate={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ delay: 0.2 }}
             >
@@ -188,7 +188,7 @@ export const InfenixMockup = () => {
                <span className="text-[10px] text-white/30 flex-1">Ask Infenix...</span>
                <div className="flex items-center gap-2">
                  <div className="bg-white/5 text-white/60 px-2 py-1 rounded text-[9px] font-medium">Standard</div>
-                 <button className="bg-white text-black p-1.5 rounded-lg">
+                 <button className="bg-white text-black p-1.5 rounded-lg" aria-label="Send message">
                     <Send size={12} />
                  </button>
                </div>
@@ -240,7 +240,7 @@ export const VartalapMockup = () => {
               key={i}
               className="bg-[#161616] p-3 rounded-lg border border-white/10 shadow-sm"
               initial={{ y: 20, opacity: 0 }}
-              whileInView={{ y: 0, opacity: 1 }}
+              animate={{ y: 0, opacity: 1 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
             >
@@ -269,7 +269,7 @@ export const VartalapMockup = () => {
               key={step}
               className="bg-[#161616] border border-white/10 rounded-md px-2 py-2 text-[8px] text-white/60 uppercase tracking-wider flex items-center justify-center text-center"
               initial={{ opacity: 0, y: 8 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              animate={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.2 + i * 0.08 }}
             >
@@ -283,7 +283,7 @@ export const VartalapMockup = () => {
           <motion.div
             className="col-span-2 bg-[#161616] rounded-lg border border-white/10 p-3 flex flex-col shadow-sm"
             initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
+            animate={{ opacity: 1 }}
             viewport={{ once: true }}
           >
             <div className="flex items-start justify-between mb-2">
@@ -316,7 +316,7 @@ export const VartalapMockup = () => {
                   strokeWidth="2"
                   strokeLinecap="round"
                   initial={{ pathLength: 0 }}
-                  whileInView={{ pathLength: 1 }}
+                  animate={{ pathLength: 1 }}
                   viewport={{ once: true }}
                   transition={{ duration: 1.2 }}
                 />
@@ -327,7 +327,7 @@ export const VartalapMockup = () => {
                   r="4"
                   fill="#3b82f6"
                   initial={{ scale: 0 }}
-                  whileInView={{ scale: 1 }}
+                  animate={{ scale: 1 }}
                   viewport={{ once: true }}
                   transition={{ delay: 1 }}
                 />
@@ -362,7 +362,7 @@ export const VartalapMockup = () => {
             <motion.div
               className="mt-2 rounded-md border border-blue-500/20 bg-[#3b82f6]/10 p-2 text-left"
               initial={{ opacity: 0, y: 5 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              animate={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.6 }}
             >
@@ -398,7 +398,7 @@ export const VartalapMockup = () => {
             <motion.div
               className="mt-auto bg-[#1A1A1A] border border-white/5 p-2 rounded text-[9px] flex flex-col gap-1.5"
               initial={{ opacity: 0, y: 10 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              animate={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 1 }}
             >
@@ -492,7 +492,7 @@ export const CodeToolMockup = () => {
               <motion.div 
                 className="flex flex-col items-center gap-2 w-full"
                 initial={{ opacity: 0, y: -10 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                animate={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4 }}
               >
@@ -509,7 +509,7 @@ export const CodeToolMockup = () => {
               <motion.div 
                 className="h-5 w-px bg-gradient-to-b from-[#1f6feb]/40 to-[#1f6feb]/10 my-1"
                 initial={{ height: 0, opacity: 0 }}
-                whileInView={{ height: 20, opacity: 1 }}
+                animate={{ height: 20, opacity: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.3, delay: 0.2 }}
               />
@@ -518,7 +518,7 @@ export const CodeToolMockup = () => {
               <motion.div 
                 className="flex flex-col items-center gap-2 w-full"
                 initial={{ opacity: 0, y: -10 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                animate={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: 0.3 }}
               >
@@ -535,7 +535,7 @@ export const CodeToolMockup = () => {
               <motion.div 
                 className="h-5 w-px bg-gradient-to-b from-[#1f6feb]/40 to-[#1f6feb]/10 my-1"
                 initial={{ height: 0, opacity: 0 }}
-                whileInView={{ height: 20, opacity: 1 }}
+                animate={{ height: 20, opacity: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.3, delay: 0.5 }}
               />
@@ -544,7 +544,7 @@ export const CodeToolMockup = () => {
               <motion.div 
                 className="flex flex-col items-center gap-2 w-full"
                 initial={{ opacity: 0, y: -10 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                animate={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: 0.6 }}
               >
@@ -561,7 +561,7 @@ export const CodeToolMockup = () => {
               <motion.div 
                 className="h-5 w-px bg-gradient-to-b from-[#1f6feb]/40 to-red-500/30 my-1"
                 initial={{ height: 0, opacity: 0 }}
-                whileInView={{ height: 20, opacity: 1 }}
+                animate={{ height: 20, opacity: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.3, delay: 0.8 }}
               />
@@ -570,7 +570,7 @@ export const CodeToolMockup = () => {
               <motion.div 
                 className="flex flex-col items-center gap-2 w-full"
                 initial={{ opacity: 0, y: -10 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                animate={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: 0.9 }}
               >
@@ -590,7 +590,7 @@ export const CodeToolMockup = () => {
             <motion.div 
               className="absolute bottom-0 left-0 right-0 bg-[#0D1117] border-t border-[#30363D] p-2 flex items-center gap-3 px-4 shadow-xl z-20 overflow-hidden"
               initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              animate={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 1.2 }}
             >
@@ -641,7 +641,7 @@ export const EnergyForecastMockup = () => {
                 key={i}
                 className="bg-[#111827] border border-[#1f2937] rounded-lg p-2.5 shadow-sm flex flex-col gap-1 relative overflow-hidden group"
                 initial={{ opacity: 0, y: 10 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                animate={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1, duration: 0.4 }}
               >
@@ -664,7 +664,7 @@ export const EnergyForecastMockup = () => {
               <motion.div 
                 className="flex-[1.5] bg-[#111827] border border-[#1f2937] rounded-lg shadow-sm flex flex-col overflow-hidden relative"
                 initial={{ opacity: 0, scale: 0.98 }}
-                whileInView={{ opacity: 1, scale: 1 }}
+                animate={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.3, duration: 0.5 }}
               >
@@ -709,7 +709,7 @@ export const EnergyForecastMockup = () => {
               <motion.div 
                 className="flex-1 bg-[#111827] border border-[#1f2937] rounded-lg shadow-sm flex flex-col overflow-hidden"
                 initial={{ opacity: 0, scale: 0.98 }}
-                whileInView={{ opacity: 1, scale: 1 }}
+                animate={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.4, duration: 0.5 }}
               >
@@ -724,7 +724,7 @@ export const EnergyForecastMockup = () => {
                       className={cn("w-[6%] rounded-t-sm", v > 80 ? "bg-red-500/60" : "bg-purple-500/40")}
                       style={{ height: `${v}%` }}
                       initial={{ height: 0 }}
-                      whileInView={{ height: `${v}%` }}
+                      animate={{ height: `${v}%` }}
                       viewport={{ once: true }}
                       transition={{ delay: 0.5 + (i * 0.05), duration: 0.5 }}
                     ></motion.div>
@@ -737,7 +737,7 @@ export const EnergyForecastMockup = () => {
             <motion.div 
               className="flex-1 bg-[#111827] border border-[#1f2937] rounded-lg shadow-sm flex flex-col overflow-hidden"
               initial={{ opacity: 0, x: 10 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              animate={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.5, duration: 0.5 }}
             >
@@ -1511,7 +1511,7 @@ export const CampusVidhyaMockup = () => {
               }
             }}
             initial={{ opacity: 0, y: yNormal + initialYOffset, scale: scaleInView, rotateZ: rotateNormal, x: xNormal }}
-            whileInView={{ 
+            animate={{ 
               opacity: currentOpacity, 
               y: currentY, 
               scale: currentScale, 
