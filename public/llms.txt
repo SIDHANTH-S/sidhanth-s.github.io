@@ -1,18 +1,22 @@
 # Sidhanth S
 
-> AI Systems Builder & Full-Stack Developer based in Chennai, India.
+> Software Engineer based in Chennai, India
 
-## Portfolio
-- https://sidhanth-s.github.io
+Website: https://sidhanth-s.github.io
 
-## Projects
-- CampusVidhya
-- Infenix
-- VartalapAI
-- CodeLens AI
-- Energy Forecast
+## Pages
+
+* About: https://sidhanth-s.github.io/about
+* Projects: https://sidhanth-s.github.io/projects
+* Experience: https://sidhanth-s.github.io/experience
+* Certifications: https://sidhanth-s.github.io/certifications
+
+## Summary
+
+Sidhanth S is a Software Engineer and Full-Stack Developer based in Chennai, India. He builds software products, developer tools, workflow platforms, and modern web applications.
 
 ## Profiles
-- GitHub: https://github.com/SIDHANTH-S
-- LinkedIn: https://www.linkedin.com/in/sidhanth-s
-- Devpost: https://devpost.com/SIDHANTH-S
+
+* GitHub: https://github.com/SIDHANTH-S
+* LinkedIn: https://www.linkedin.com/in/sidhanth-s
+* Devpost: https://devpost.com/SIDHANTH-S

@@ -297,6 +297,7 @@ export function ProfileCard() {
                 }}
                 className="hover:text-white"
                 id="social-github-link"
+                aria-label="GitHub Profile"
               >
                 <Github size={18} />
               </a>
@@ -310,6 +311,7 @@ export function ProfileCard() {
                 }}
                 className="hover:text-white"
                 id="social-linkedin-link"
+                aria-label="LinkedIn Profile"
               >
                 <Linkedin size={18} />
               </a>
@@ -323,6 +325,7 @@ export function ProfileCard() {
                 }}
                 className="hover:text-white"
                 id="social-resume-link"
+                aria-label="Download Resume"
               >
                 <FileText size={18} />
               </a>
@@ -354,6 +357,7 @@ export function ProfileCard() {
             }}
             className="hover:bg-zinc-700 cursor-pointer text-sans"
             id="hire-me-action"
+            aria-label="Send email to sidhanthranka@gmail.com"
           >
             <Mail size={16} />
             Hire me

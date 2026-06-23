@@ -5,7 +5,7 @@ import WhoIs from "@/components/WhoIs";
 
 export const metadata = constructMetadata({
   title: "About | Sidhanth S",
-  description: "Learn more about Sidhanth S, a Software Engineer and AI Systems Builder based in Chennai.",
+  description: "Learn more about Sidhanth S, a Software Engineer and Full-Stack Developer based in Chennai, India.",
   url: "https://sidhanth-s.github.io/about",
 });
 
@@ -20,7 +20,7 @@ export default function AboutPage() {
     "@type": "ProfilePage",
     "dateCreated": "2025-09-01T00:00:00Z",
     "dateModified": new Date().toISOString(),
-    "description": "About Sidhanth S — AI systems builder and full-stack developer based in Chennai, India.",
+    "description": "About Sidhanth S — Software Engineer and Full-Stack Developer based in Chennai, India.",
     "isPartOf": {
       "@id": "https://sidhanth-s.github.io/#website"
     },

@@ -241,8 +241,11 @@ const Component = React.forwardRef(function (props: any, ref: any) {
                         <img
   src={logo}
   alt={`${SIkwxPXLT} certificate badge`}
+  width={200}
+  height={200}
   style={{
     width: isEdxCert ? "72%" : "60%",
+    height: "auto",
     display: "block",
     margin: "0 auto",
     zIndex: 10,
@@ -260,6 +263,8 @@ const Component = React.forwardRef(function (props: any, ref: any) {
                       <img
   src={badge}
   alt={`${SIkwxPXLT} certificate badge`}
+  width={120}
+  height={120}
   style={
     isEdxCert
       ? {
@@ -268,6 +273,7 @@ const Component = React.forwardRef(function (props: any, ref: any) {
           left: "50%",
           transform: "translate(-50%, -50%)",
           width: "130px",
+          height: "auto",
           zIndex: 10,
           pointerEvents: "none",
         }
@@ -278,6 +284,7 @@ const Component = React.forwardRef(function (props: any, ref: any) {
             left: "50%",
             transform: "translate(-50%, -50%)",
             width: "170px",
+            height: "auto",
             zIndex: 10,
             pointerEvents: "none",
           }
@@ -287,6 +294,7 @@ const Component = React.forwardRef(function (props: any, ref: any) {
             left: "50%",
             transform: "translate(-50%, -50%)",
             width: "120px",
+            height: "auto",
             zIndex: 10,
             pointerEvents: "none",
           }

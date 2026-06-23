@@ -1,8 +1,25 @@
 'use client';
-import { motion, useScroll, useTransform } from "motion/react";
+import { motion, useScroll, useTransform, useSpring } from "motion/react";
+import Image from "next/image";
 import { Github, Linkedin } from "lucide-react";
-import { InfenixMockup, CodeToolMockup, EnergyForecastMockup } from "./ui/Mockups";
+import dynamic from "next/dynamic";
 import { RotatingText } from "./ui/TextEffects";
+
+// Lazy load mockups for better performance
+const InfenixMockup = dynamic(() => import("./ui/Mockups").then(mod => mod.InfenixMockup), {
+  loading: () => <div className="w-full h-full bg-white/5 animate-pulse" />,
+  ssr: false
+});
+
+const CodeToolMockup = dynamic(() => import("./ui/Mockups").then(mod => mod.CodeToolMockup), {
+  loading: () => <div className="w-full h-full bg-white/5 animate-pulse" />,
+  ssr: false
+});
+
+const EnergyForecastMockup = dynamic(() => import("./ui/Mockups").then(mod => mod.EnergyForecastMockup), {
+  loading: () => <div className="w-full h-full bg-white/5 animate-pulse" />,
+  ssr: false
+});
 
 interface HeroProps {
   ready?: boolean;
@@ -43,10 +60,8 @@ export const Hero = ({ ready = true }: HeroProps) => {
           <div className="flex flex-col gap-2">
             {/* Real visible H1 — styled as mono label, readable by crawlers */}
             <h1 className="font-mono text-xs text-white/40 uppercase tracking-widest mb-2">
-              Sidhanth S — Software Engineer 
+              Sidhanth S — Software Engineer
             </h1>
-
-            
 
             <div className="font-display text-[52px] sm:text-[72px] md:text-[80px] lg:text-[96px] xl:text-[112px] font-black tracking-tighter leading-[0.82] text-ink uppercase" aria-hidden="true">
               From messy
@@ -61,7 +76,7 @@ export const Hero = ({ ready = true }: HeroProps) => {
 
           <div className="text-base md:text-lg text-white/80 leading-relaxed font-sans max-w-lg mt-2">
             <p>
-              <strong>Sidhanth S</strong> is a Software Engineer, AI Systems Builder, and Full Stack Developer based in Chennai, India. He builds workflow automation systems, AI-powered platforms, developer tools, and operational software products.
+              <strong>Sidhanth S</strong> is a Software Engineer and Full-Stack Developer based in Chennai, India. He builds software products, workflow platforms, developer tools, and modern web applications.
             </p>
           </div>
 
@@ -82,13 +97,15 @@ export const Hero = ({ ready = true }: HeroProps) => {
               View Projects
             </a>
 
+
+
             <div className="flex items-center gap-3 ml-2 lg:ml-4">
               <a
                 href="https://github.com/SIDHANTH-S"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center text-white hover:bg-white/10 transition-colors"
-                aria-label="GitHub"
+                aria-label="Visit GitHub Profile"
               >
                 <Github size={18} />
               </a>
@@ -98,7 +115,7 @@ export const Hero = ({ ready = true }: HeroProps) => {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center text-white hover:bg-white/10 transition-colors"
-                aria-label="LinkedIn"
+                aria-label="Visit LinkedIn Profile"
               >
                 <Linkedin size={18} />
               </a>

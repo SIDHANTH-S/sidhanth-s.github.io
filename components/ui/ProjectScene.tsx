@@ -194,13 +194,13 @@ export const ProjectScene = ({
                   />
                 </button>
                 <div className="flex gap-2">
-                  <button className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center text-white/70 hover:text-white hover:bg-white/10 transition-colors">
+                  <button className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center text-white/70 hover:text-white hover:bg-white/10 transition-colors" aria-label="View GitHub Repository">
                     <Github size={16} />
                   </button>
-                  <Link 
+                  <Link
                     href={`/projects/${id}`}
                     className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center text-white/70 hover:text-white hover:bg-white/10 transition-colors"
-                    title="View Dedicated Project Page"
+                    aria-label="View Dedicated Project Page"
                   >
                     <ExternalLink size={16} />
                   </Link>

@@ -1,14 +1,14 @@
 import { constructMetadata } from "@/lib/seo";
 import { generateBreadcrumbSchema, generateCollectionPageSchema } from "@/lib/schema";
 import { ProjectScene } from "@/components/ui/ProjectScene";
-import {
-  CampusVidhyaMockup,
-  InfenixMockup,
-  VartalapMockup,
-  CodeToolMockup,
-  EnergyForecastMockup,
-} from "@/components/ui/Mockups";
+import dynamic from "next/dynamic";
 import Link from "next/link";
+
+const CampusVidhyaMockup = dynamic(() => import("@/components/ui/Mockups").then(m => m.CampusVidhyaMockup));
+const InfenixMockup = dynamic(() => import("@/components/ui/Mockups").then(m => m.InfenixMockup));
+const VartalapMockup = dynamic(() => import("@/components/ui/Mockups").then(m => m.VartalapMockup));
+const CodeToolMockup = dynamic(() => import("@/components/ui/Mockups").then(m => m.CodeToolMockup));
+const EnergyForecastMockup = dynamic(() => import("@/components/ui/Mockups").then(m => m.EnergyForecastMockup));
 
 export const metadata = constructMetadata({
   title: "Projects | Sidhanth S",
@@ -43,13 +43,24 @@ export default function ProjectsIndex() {
         <h1 className="font-display text-[60px] md:text-[84px] font-black tracking-tighter leading-[0.85] uppercase mb-6">
           Projects
         </h1>
-        <p className="text-white/70 font-sans text-lg max-w-2xl">
-          Systems and applications built for scale, automation, and real operational pressure.
-        </p>
+        <div className="max-w-3xl">
+          <p className="text-white/70 font-sans text-lg leading-relaxed mb-6">
+            Systems and applications built for scale, automation, and real operational pressure.
+          </p>
+          <p className="text-white/60 font-sans text-base leading-relaxed mb-4">
+            Each project represents a focused problem-solving approach — from campus workflow platforms that replace scattered communication systems, to AI assistants designed around specific work patterns, to business intelligence tools that operationalize data for MSMEs.
+          </p>
+          <p className="text-white/60 font-sans text-base leading-relaxed mb-4">
+            The engineering philosophy prioritizes production-grade architecture over quick prototypes. Projects are built with full-stack considerations: React and Next.js for responsive interfaces, proper state management, backend integration, and deployment-ready infrastructure.
+          </p>
+          <p className="text-white/60 font-sans text-base leading-relaxed">
+            Technology choices follow the problem context — time-series forecasting with Python and Prophet, AST parsing for code intelligence, OCR and NLP for document processing, and modern web frameworks for user-facing applications. The focus remains on solving actual operational problems, not accumulating technology for its own sake.
+          </p>
+        </div>
       </div>
 
       <div className="relative z-20 bg-paper">
-        <Link href="/projects/campusvidhya" className="block group">
+        <Link href="/projects/campusvidhya" className="block group" aria-label="View Campus Vidhya project details">
           <ProjectScene
             id="campusvidhya"
             alignIndex="01"
@@ -68,7 +79,7 @@ export default function ProjectsIndex() {
           </div>
         </Link>
 
-        <Link href="/projects/infenix" className="block group">
+        <Link href="/projects/infenix" className="block group" aria-label="View Infenix project details">
           <ProjectScene
             id="infenix"
             alignIndex="02"
@@ -86,7 +97,7 @@ export default function ProjectsIndex() {
           </div>
         </Link>
 
-        <Link href="/projects/vartalapai" className="block group">
+        <Link href="/projects/vartalapai" className="block group" aria-label="View VartalapAI project details">
           <ProjectScene
             id="vartalap"
             alignIndex="03"
@@ -104,7 +115,7 @@ export default function ProjectsIndex() {
           </div>
         </Link>
 
-        <Link href="/projects/codelens-ai" className="block group">
+        <Link href="/projects/codelens-ai" className="block group" aria-label="View CodeLens AI project details">
           <ProjectScene
             id="codelens"
             alignIndex="04"
@@ -122,7 +133,7 @@ export default function ProjectsIndex() {
           </div>
         </Link>
 
-        <Link href="/projects/energy-forecast" className="block group">
+        <Link href="/projects/energy-forecast" className="block group" aria-label="View Energy Forecast project details">
           <ProjectScene
             id="energy"
             alignIndex="05"

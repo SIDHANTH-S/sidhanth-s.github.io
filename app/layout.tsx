@@ -4,9 +4,9 @@ import { BackButton } from '@/components/BackButton';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://sidhanth-s.github.io'),
-  title: 'Sidhanth S — Software Engineer, AI Systems Builder',
+  title: 'Sidhanth S — Software Engineer',
   description:
-    'AI & Cloud Computing student building scalable full-stack software, AI systems, automation tools, and developer platforms.',
+    'Software Engineer and Full-Stack Developer based in Chennai, India building software products, workflow platforms, developer tools, and modern web applications.',
   authors: [{ name: 'Sidhanth S' }],
   creator: 'Sidhanth S',
   publisher: 'Sidhanth S',
@@ -14,9 +14,9 @@ export const metadata: Metadata = {
     canonical: 'https://sidhanth-s.github.io',
   },
   openGraph: {
-    title: 'Sidhanth S — Software Engineer, AI Systems Builder',
+    title: 'Sidhanth S — Software Engineer',
     description:
-      'AI & Cloud Computing student building scalable full-stack software, AI systems, automation tools, and developer platforms.',
+      'Software Engineer and Full-Stack Developer based in Chennai, India building software products, workflow platforms, developer tools, and modern web applications.',
     url: 'https://sidhanth-s.github.io',
     siteName: 'Sidhanth S',
     images: [
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
         url: '/og-image.png',
         width: 1200,
         height: 630,
-        alt: 'Sidhanth S — Software Engineer & AI Systems Builder',
+        alt: 'Sidhanth S — Software Engineer',
       },
     ],
     locale: 'en_US',
@@ -32,9 +32,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Sidhanth S — Software Engineer, AI Systems Builder',
+    title: 'Sidhanth S — Software Engineer',
     description:
-      'AI & Cloud Computing student building scalable full-stack software, AI systems, automation tools, and developer platforms.',
+      'Software Engineer and Full-Stack Developer based in Chennai, India building software products, workflow platforms, developer tools, and modern web applications.',
     images: ['/og-image.png'],
   },
   robots: {
@@ -65,11 +65,11 @@ export const metadata: Metadata = {
   keywords: [
   'Sidhanth S',
   'Software Engineer',
-  'AI Systems',
-  'Full-Stack Engineering',
-  'Workflow Automation',
-  'Cloud Computing',
+  'Full-Stack Developer',
+  'Developer',
+  'Builder',
   'Chennai',
+  'India',
 ],
   formatDetection: {
     email: false,
@@ -102,9 +102,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               "name": "Sidhanth S",
               "alternateName": ["Sidhanth"],
               "url": "https://sidhanth-s.github.io",
-              "image": "https://sidhanth-s.github.io/Portrait.jpg",
-              "jobTitle": "Software Engineer & AI Systems Builder",
-              "description": "CS undergraduate based in Chennai specializing in AI and Cloud Computing, building scalable software systems.",
+              "image": "https://sidhanth-s.github.io/Portrait.webp",
+              "jobTitle": "Software Engineer",
+              "description": "Software Engineer and Full-Stack Developer based in Chennai, India building software products, workflow platforms, developer tools, and modern web applications.",
               "address": {
                 "@type": "PostalAddress",
                 "addressLocality": "Chennai",
@@ -112,15 +112,14 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 "addressCountry": "IN"
               },
               "knowsAbout": [
+                "Software Engineering",
+                "Full-Stack Development",
                 "Artificial Intelligence",
                 "Machine Learning",
-                "AI Systems",
-                "Full-Stack Engineering",
-                "Workflow Automation",
-                "Developer Tooling",
-                "Cloud Computing",
                 "React Development",
                 "Next.js",
+                "Developer Tooling",
+                "Workflow Automation",
                 "Java",
                 "Python"
               ],
@@ -157,7 +156,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               "@id": "https://sidhanth-s.github.io/#website",
               "name": "Sidhanth S",
               "url": "https://sidhanth-s.github.io",
-              "description": "Software Engineer, AI Systems Builder & Full-Stack Developer based in Chennai, India.",
+              "description": "Software Engineer and Full-Stack Developer based in Chennai, India.",
               "author": {
                 "@id": "https://sidhanth-s.github.io/#person"
               }
@@ -178,7 +177,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                   "name": "Who is Sidhanth S?",
                   "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Sidhanth S is a software engineer and AI systems builder based in Chennai, India, specializing in full-stack development, AI integration, and workflow automation."
+                    "text": "Sidhanth S is a Software Engineer and Full-Stack Developer based in Chennai, India, building software products, workflow platforms, developer tools, and modern web applications."
                   }
                 },
                 {
@@ -186,7 +185,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                   "name": "What does Sidhanth S build?",
                   "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Sidhanth builds scalable software systems including AI-powered applications, developer tools, and workflow automation platforms using React, Next.js, Java, Python, and cloud technologies."
+                    "text": "Sidhanth builds software products, workflow platforms, developer tools, and modern web applications using React, Next.js, Java, and Python."
                   }
                 },
                 {
@@ -212,7 +211,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               "dateCreated": "2025-09-01T00:00:00Z",
               "dateModified": "2026-05-29T00:00:00Z",
               "description":
-                "Portfolio of Sidhanth S — AI systems builder, full-stack developer, and Computer Science Engineering student based in Chennai, India.",
+                "Portfolio of Sidhanth S — Software Engineer and Full-Stack Developer based in Chennai, India.",
               "isPartOf": {
                 "@id": "https://sidhanth-s.github.io/#website"
               },

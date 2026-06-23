@@ -1,11 +1,15 @@
 'use client';
 import { motion } from "motion/react";
+import React from "react";
+import Image from "next/image";
 import { cn } from "@/lib/utils";
 
 const ShadcnIcon = () => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 256 256"
+    width="14"
+    height="14"
     className="w-3.5 h-3.5 text-white/70 transition-transform duration-300 group-hover/skill:scale-110"
   >
     
@@ -191,10 +195,12 @@ const SkillIcon = ({ skill }: { skill: any }) => {
   }
 
   return (
-    <img
+    <Image
       src={`https://api.iconify.design/logos:${skill.slug}.svg`}
       alt={skill.name}
-      className="w-3.5 h-3.5 object-contain transition-transform duration-300 group-hover/skill:scale-110"
+      width={14}
+      height={14}
+      className="object-contain transition-transform duration-300 group-hover/skill:scale-110"
     />
   );
 };

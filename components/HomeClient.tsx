@@ -1,5 +1,6 @@
 'use client';
 import React, { useEffect, useState } from "react";
+import dynamic from "next/dynamic";
 import Lenis from "lenis";
 import { ScrollProgress } from "@/components/ui/ScrollProgress";
 import { Hero } from "@/components/Hero";
@@ -13,13 +14,11 @@ import { setLenisInstance } from "@/lib/scroll-lock";
 import Preloader from "@/components/ui/Preloader";
 import { AboutBrief } from "@/components/AboutBrief";
 import WhoIs from "@/components/WhoIs";
-import {
-  InfenixMockup,
-  VartalapMockup,
-  CampusVidhyaMockup,
-  CodeToolMockup,
-  EnergyForecastMockup,
-} from "@/components/ui/Mockups";
+const InfenixMockup = dynamic(() => import("@/components/ui/Mockups").then(m => m.InfenixMockup));
+const VartalapMockup = dynamic(() => import("@/components/ui/Mockups").then(m => m.VartalapMockup));
+const CampusVidhyaMockup = dynamic(() => import("@/components/ui/Mockups").then(m => m.CampusVidhyaMockup));
+const CodeToolMockup = dynamic(() => import("@/components/ui/Mockups").then(m => m.CodeToolMockup));
+const EnergyForecastMockup = dynamic(() => import("@/components/ui/Mockups").then(m => m.EnergyForecastMockup));
 import Link from "next/link";
 import { VerticalNavDots } from "@/components/VerticalNavDots";
 import { MobileNav } from "@/components/MobileNav";
@@ -98,7 +97,7 @@ export default function HomeClient() {
 
         <AboutBrief />
         <div className="w-full text-center pb-24 bg-paper relative z-20">
-           <Link href="/about" className="text-white font-mono text-xs tracking-widest uppercase border border-white/20 px-6 py-3 rounded-full hover:bg-white/10 transition-colors">
+           <Link href="/about" className="text-white font-mono text-xs tracking-widest uppercase border border-white/20 px-6 py-3 rounded-full hover:bg-white/10 transition-colors" aria-label="View About Page">
               View About Page →
            </Link>
         </div>
@@ -162,7 +161,7 @@ export default function HomeClient() {
             mockup={<EnergyForecastMockup />}
           />
           <div className="w-full text-center pb-24 pt-8 bg-paper relative z-20">
-             <Link href="/projects" className="text-white font-mono text-xs tracking-widest uppercase border border-white/20 px-6 py-3 rounded-full hover:bg-white/10 transition-colors">
+             <Link href="/projects" className="text-white font-mono text-xs tracking-widest uppercase border border-white/20 px-6 py-3 rounded-full hover:bg-white/10 transition-colors" aria-label="View All Projects">
                 View All Projects →
              </Link>
           </div>
@@ -170,14 +169,14 @@ export default function HomeClient() {
         <GitHubActivity />
         <Experience />
         <div className="w-full text-center pb-24 bg-paper relative z-20">
-             <Link href="/experience" className="text-white font-mono text-xs tracking-widest uppercase border border-white/20 px-6 py-3 rounded-full hover:bg-white/10 transition-colors">
+             <Link href="/experience" className="text-white font-mono text-xs tracking-widest uppercase border border-white/20 px-6 py-3 rounded-full hover:bg-white/10 transition-colors" aria-label="View Experience Details">
                 View Experience Details →
              </Link>
         </div>
         <Skills />
         <Credentials />
         <div className="w-full text-center pb-24 bg-paper relative z-20">
-             <Link href="/certifications" className="text-white font-mono text-xs tracking-widest uppercase border border-white/20 px-6 py-3 rounded-full hover:bg-white/10 transition-colors">
+             <Link href="/certifications" className="text-white font-mono text-xs tracking-widest uppercase border border-white/20 px-6 py-3 rounded-full hover:bg-white/10 transition-colors" aria-label="View Certifications">
                 View Certifications →
              </Link>
         </div>
