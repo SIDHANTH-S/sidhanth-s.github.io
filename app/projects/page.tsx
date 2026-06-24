@@ -1,7 +1,7 @@
 import { constructMetadata } from "@/lib/seo";
 import { generateBreadcrumbSchema, generateCollectionPageSchema } from "@/lib/schema";
 import dynamic from "next/dynamic";
-const ProjectScene = dynamic(() => import("@/components/ui/ProjectScene").then(mod => mod.ProjectScene), { ssr: false });
+const ProjectScene = dynamic(() => import("@/components/ui/ProjectScene").then(mod => mod.ProjectScene));
 import Link from "next/link";
 
 const CampusVidhyaMockup = dynamic(() => import("@/components/ui/Mockups").then(m => m.CampusVidhyaMockup));
