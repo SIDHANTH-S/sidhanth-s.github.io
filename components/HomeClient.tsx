@@ -4,10 +4,6 @@ import dynamic from "next/dynamic";
 
 import { ScrollProgress } from "@/components/ui/ScrollProgress";
 import { Hero } from "@/components/Hero";
-import { Experience } from "@/components/Experience";
-import { Skills } from "@/components/Skills";
-import { Credentials } from "@/components/Credentials";
-import { Contact } from "@/components/Contact";
 import { setLenisInstance } from "@/lib/scroll-lock";
 import { AboutBrief } from "@/components/AboutBrief";
 import WhoIs from "@/components/WhoIs";
@@ -16,6 +12,11 @@ import { useRef } from "react";
 
 const GitHubActivity = dynamic(() => import("@/components/GitHubActivity"), { ssr: false });
 const ProjectsSection = dynamic(() => import("@/components/ProjectsSection"), { ssr: true });
+const Experience = dynamic(() => import("@/components/Experience").then(mod => mod.Experience));
+const Skills = dynamic(() => import("@/components/Skills").then(mod => mod.Skills));
+const Credentials = dynamic(() => import("@/components/Credentials").then(mod => mod.Credentials));
+const Contact = dynamic(() => import("@/components/Contact").then(mod => mod.Contact));
+
 import Link from "next/link";
 import { VerticalNavDots } from "@/components/VerticalNavDots";
 import { MobileNav } from "@/components/MobileNav";
@@ -27,6 +28,8 @@ export default function HomeClient() {
   useEffect(() => {
     // Delay Lenis initialization to not block the main thread during hydration/first paint
     const initLenis = async () => {
+      if (window.innerWidth < 1024) return;
+      
       const { default: Lenis } = await import("lenis");
       
       const lenis = new Lenis({

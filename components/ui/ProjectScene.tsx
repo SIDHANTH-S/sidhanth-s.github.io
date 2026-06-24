@@ -120,7 +120,7 @@ export const ProjectScene = ({
     <section id={id} ref={containerRef} className="relative w-full h-[130vh] md:h-[150vh]">
       <div className="sticky top-0 h-screen w-full flex items-center overflow-hidden will-change-transform">
         <div className="absolute bottom-12 right-12 opacity-[0.03] pointer-events-none select-none z-0">
-          <span className="font-display text-[12vw] font-black tracking-tighter leading-none uppercase">
+          <span aria-hidden="true" className="font-display text-[12vw] font-black tracking-tighter leading-none uppercase">
             PORTFOLIO
           </span>
         </div>
