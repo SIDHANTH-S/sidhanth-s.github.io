@@ -1,7 +1,7 @@
 'use client';
 import React, { useEffect, useState } from "react";
 import dynamic from "next/dynamic";
-import Lenis from "lenis";
+
 import { ScrollProgress } from "@/components/ui/ScrollProgress";
 import { Hero } from "@/components/Hero";
 import { Experience } from "@/components/Experience";
@@ -26,7 +26,9 @@ export default function HomeClient() {
 
   useEffect(() => {
     // Delay Lenis initialization to not block the main thread during hydration/first paint
-    const initLenis = () => {
+    const initLenis = async () => {
+      const { default: Lenis } = await import("lenis");
+      
       const lenis = new Lenis({
         duration: 1.2,
         easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
@@ -47,20 +49,34 @@ export default function HomeClient() {
 
       animationFrameId = requestAnimationFrame(raf);
 
-      return () => {
+      // We attach the cleanup directly to the instance so we can clean it up 
+      // when the component unmounts even if it unmounts after init
+      (lenis as any)._customCleanup = () => {
         cancelAnimationFrame(animationFrameId);
         lenis.destroy();
         setLenisInstance(null);
       };
     };
 
+    let timeoutId: NodeJS.Timeout;
+    let idleId: number;
+
     if ('requestIdleCallback' in window) {
-      const id = requestIdleCallback(initLenis);
-      return () => cancelIdleCallback(id);
+      idleId = requestIdleCallback(() => {
+        timeoutId = setTimeout(initLenis, 500); // Wait a bit even after idle
+      });
     } else {
-      const id = setTimeout(initLenis, 1);
-      return () => clearTimeout(id);
+      timeoutId = setTimeout(initLenis, 1500);
     }
+
+    return () => {
+      if (idleId) cancelIdleCallback(idleId);
+      if (timeoutId) clearTimeout(timeoutId);
+      const instance = require("@/lib/scroll-lock").getLenisInstance();
+      if (instance && instance._customCleanup) {
+        instance._customCleanup();
+      }
+    };
   }, []);
 
   return (

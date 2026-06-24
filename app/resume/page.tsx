@@ -21,7 +21,7 @@ export default function ResumePage() {
       />
 
       <div className="w-full max-w-6xl mx-auto px-6 py-8">
-        <h1 className="font-mono text-sm uppercase tracking-widest text-white/40">
+        <h1 className="font-mono text-sm uppercase tracking-widest text-zinc-400">
           Sidhanth S / Resume
         </h1>
       </div>

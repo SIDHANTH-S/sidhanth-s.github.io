@@ -174,7 +174,7 @@ export const ProjectScene = ({
               </ul>
 
               <div className="bg-[#1A1A1A] border border-white/10 p-4 rounded-lg mt-2 border-l-2 border-l-white">
-                <span className="block text-[10px] uppercase tracking-widest text-white/40 mb-1">
+                <span className="block text-[10px] uppercase tracking-widest text-zinc-400 mb-1">
                   Key Impact
                 </span>
                 <span className="font-bold text-xl tracking-tight text-white/90">

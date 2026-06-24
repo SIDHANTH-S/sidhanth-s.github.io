@@ -67,7 +67,7 @@ export const Hero = () => {
         >
           <div className="flex flex-col gap-2">
             {/* Real visible H1 — styled as mono label, readable by crawlers */}
-            <h1 className="font-mono text-xs text-white/40 uppercase tracking-widest mb-2">
+            <h1 className="font-mono text-xs text-zinc-400 uppercase tracking-widest mb-2">
               Sidhanth S — Software Engineer
             </h1>
 

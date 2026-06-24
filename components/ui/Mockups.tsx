@@ -61,7 +61,7 @@ const WindowFrame = ({
         <div className="w-2.5 h-2.5 rounded-full bg-yellow-500/50" />
         <div className="w-2.5 h-2.5 rounded-full bg-green-500/50" />
       </div>
-      <div className="text-[10px] text-white/30 font-mono tracking-widest hidden sm:block">OPERATIONAL VIEW</div>
+      <div className="text-[10px] text-zinc-400 font-mono tracking-widest hidden sm:block">OPERATIONAL VIEW</div>
       <div className="w-8"></div>
     </div>
     <div className="flex-1 w-full relative overflow-hidden bg-transparent">
@@ -85,7 +85,7 @@ export const InfenixMockup = () => {
           </button>
           
           <div className="flex flex-col gap-1 mt-2">
-            <div className="text-[9px] uppercase tracking-widest text-white/40 mb-1 ml-1">Recent</div>
+            <div className="text-[9px] uppercase tracking-widest text-zinc-400 mb-1 ml-1">Recent</div>
             <div className="text-[10px] text-white/70 py-1.5 px-2 rounded hover:bg-white/5 cursor-pointer truncate">Java basics concepts</div>
             <div className="text-[10px] text-white/70 py-1.5 px-2 rounded hover:bg-white/5 cursor-pointer truncate">React hooks intro</div>
             <div className="text-[10px] text-white/70 py-1.5 px-2 rounded hover:bg-white/5 cursor-pointer truncate">Data structures notes</div>
@@ -107,7 +107,7 @@ export const InfenixMockup = () => {
                <button className="bg-blue-600/20 text-blue-400 font-semibold text-[10px] uppercase tracking-widest px-2.5 py-1 rounded border border-blue-500/30 flex items-center gap-1.5">
                  <GraduationCap size={12} /> Start Tutor
                </button>
-               <span className="text-white/30">|</span>
+               <span className="text-zinc-400">|</span>
                <div className="flex gap-4 text-white/60 text-[10px] font-medium hidden sm:flex">
                  <span className="hover:text-white cursor-pointer">Folders</span>
                  <span className="hover:text-white cursor-pointer">Library</span>
@@ -185,7 +185,7 @@ export const InfenixMockup = () => {
           {/* Message Input Box */}
           <div className="p-4 bg-[#161616] border-t border-white/5 shrink-0 flex items-center justify-center">
             <div className="w-full max-w-lg bg-[#1A1A1A] border border-white/10 rounded-xl p-1.5 pl-4 flex items-center shadow-sm">
-               <span className="text-[10px] text-white/30 flex-1">Ask Infenix...</span>
+               <span className="text-[10px] text-zinc-400 flex-1">Ask Infenix...</span>
                <div className="flex items-center gap-2">
                  <div className="bg-white/5 text-white/60 px-2 py-1 rounded text-[9px] font-medium">Standard</div>
                  <button className="bg-white text-black p-1.5 rounded-lg" aria-label="Send message">
@@ -333,7 +333,7 @@ export const VartalapMockup = () => {
                 />
               </svg>
 
-              <div className="absolute bottom-1.5 left-3 right-3 flex justify-between text-[7px] text-white/30 font-medium tracking-wide">
+              <div className="absolute bottom-1.5 left-3 right-3 flex justify-between text-[7px] text-zinc-400 font-medium tracking-wide">
                 <span>Mon</span>
                 <span>Tue</span>
                 <span>Wed</span>
@@ -413,19 +413,19 @@ export const VartalapMockup = () => {
               
               <div className="flex flex-col gap-1 mt-0.5">
                 <div className="flex justify-between">
-                  <span className="text-white/40">Vendor</span>
+                  <span className="text-zinc-400">Vendor</span>
                   <span className="text-white/90">Sri Balaji Traders</span>
                 </div>
                 <div className="flex justify-between">
-                  <span className="text-white/40">GSTIN</span>
+                  <span className="text-zinc-400">GSTIN</span>
                   <span className="text-white/90 font-mono text-[8px] mt-0.5">33ABCDE1234F1Z5</span>
                 </div>
                 <div className="flex justify-between mt-1 pt-1 border-t border-white/5">
-                  <span className="text-white/40">Tax</span>
+                  <span className="text-zinc-400">Tax</span>
                   <span className="text-white/80">₹7,704</span>
                 </div>
                 <div className="flex justify-between">
-                  <span className="text-white/40">Total</span>
+                  <span className="text-zinc-400">Total</span>
                   <span className="text-blue-400 font-medium">₹42,800</span>
                 </div>
               </div>
@@ -451,12 +451,12 @@ export const CodeToolMockup = () => {
           {/* Left Panel: Repository Scan */}
           <div className="w-36 border-r border-[#30363D] bg-[#0D1117] p-3 flex flex-col gap-3 shrink-0">
             <div className="flex flex-col gap-1 mt-1">
-              <span className="text-white/40 text-[6.5px] uppercase tracking-widest font-bold">Repository</span>
+              <span className="text-zinc-400 text-[6.5px] uppercase tracking-widest font-bold">Repository</span>
               <span className="text-[#a5d6ff] font-mono text-[9px] flex items-center gap-1.5 bg-[#1f6feb]/10 px-1.5 py-1 rounded border border-[#1f6feb]/20 shadow-sm"><FolderGit2 size={10} className="text-[#1f6feb]"/> ecommerce-api/</span>
             </div>
             
             <div className="border-t border-[#30363D] pt-3 flex flex-col gap-1.5">
-              <span className="text-white/40 text-[6.5px] uppercase tracking-widest font-bold">Scan Summary</span>
+              <span className="text-zinc-400 text-[6.5px] uppercase tracking-widest font-bold">Scan Summary</span>
               <div className="bg-[#161b22] border border-[#30363D] rounded-md p-2 flex flex-col gap-1.5 shadow-sm">
                 <div className="flex justify-between items-center text-[7.5px]"><span className="text-white/60">Files indexed</span><span className="text-white font-mono">142</span></div>
                 <div className="flex justify-between items-center text-[7.5px]"><span className="text-white/60">Functions</span><span className="text-white font-mono">386</span></div>
@@ -466,7 +466,7 @@ export const CodeToolMockup = () => {
             </div>
 
             <div className="border-t border-[#30363D] pt-3 flex flex-col gap-1.5 flex-1">
-              <span className="text-white/40 text-[6.5px] uppercase tracking-widest font-bold">Layer View</span>
+              <span className="text-zinc-400 text-[6.5px] uppercase tracking-widest font-bold">Layer View</span>
               <div className="flex flex-col gap-0.5">
                 {[
                   { n: "01 Architecture", a: false }, 
@@ -496,7 +496,7 @@ export const CodeToolMockup = () => {
                 viewport={{ once: true }}
                 transition={{ duration: 0.4 }}
               >
-                 <div className="text-[6.5px] text-white/30 uppercase tracking-widest font-bold">Layer 01 • Architecture</div>
+                 <div className="text-[6.5px] text-zinc-400 uppercase tracking-widest font-bold">Layer 01 • Architecture</div>
                  <div className="flex gap-2">
                    {["Frontend", "Backend", "Database", "Payments"].map(x => (
                      <div key={x} className={cn("px-3 py-1.5 rounded-md border text-[8.5px] shadow-sm flex items-center gap-1.5 transition-all font-medium", x === "Backend" ? "bg-[#1f6feb]/10 border-[#1f6feb]/40 text-[#a5d6ff] shadow-[0_0_10px_rgba(31,111,235,0.1)] ring-1 ring-[#1f6feb]/20" : "bg-[#161b22] border-[#30363D] text-gray-400 opacity-60")}>
@@ -522,7 +522,7 @@ export const CodeToolMockup = () => {
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: 0.3 }}
               >
-                 <div className="text-[6.5px] text-white/30 uppercase tracking-widest font-bold">Layer 02 • Domain</div>
+                 <div className="text-[6.5px] text-zinc-400 uppercase tracking-widest font-bold">Layer 02 • Domain</div>
                  <div className="flex gap-2">
                    {["Auth", "Products", "Cart", "Orders", "Payments"].map(x => (
                      <div key={x} className={cn("px-3 py-1.5 rounded-md border text-[8.5px] shadow-sm flex items-center gap-1.5 transition-all font-medium", x === "Cart" ? "bg-[#1f6feb]/10 border-[#1f6feb]/40 text-[#a5d6ff] shadow-[0_0_10px_rgba(31,111,235,0.1)] ring-1 ring-[#1f6feb]/20" : "bg-[#161b22] border-[#30363D] text-gray-400 opacity-60")}>
@@ -548,7 +548,7 @@ export const CodeToolMockup = () => {
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: 0.6 }}
               >
-                 <div className="text-[6.5px] text-white/30 uppercase tracking-widest font-bold">Layer 03 • Files</div>
+                 <div className="text-[6.5px] text-zinc-400 uppercase tracking-widest font-bold">Layer 03 • Files</div>
                  <div className="flex gap-2">
                    {["cart.service.ts", "order.service.ts", "payment.gateway.ts", "inventory.repo.ts"].map(x => (
                      <div key={x} className={cn("px-3 py-1.5 rounded-md border text-[8.5px] shadow-sm flex items-center gap-1.5 font-mono transition-all", x === "cart.service.ts" ? "bg-[#1f6feb]/10 border-[#1f6feb]/40 text-[#a5d6ff] shadow-[0_0_10px_rgba(31,111,235,0.1)] ring-1 ring-[#1f6feb]/20" : "bg-[#161b22] border-[#30363D] text-gray-400 opacity-60")}>
@@ -594,7 +594,7 @@ export const CodeToolMockup = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 1.2 }}
             >
-              <span className="text-[6.5px] text-white/40 uppercase font-bold tracking-widest shrink-0 bg-[#0D1117] px-1.5 py-0.5 rounded border border-[#30363D]">Trace Path</span>
+              <span className="text-[6.5px] text-zinc-400 uppercase font-bold tracking-widest shrink-0 bg-[#0D1117] px-1.5 py-0.5 rounded border border-[#30363D]">Trace Path</span>
               <div className="flex items-center gap-1.5 text-[8.5px] font-mono text-gray-400 shrink-0">
                  <span>repo</span> <ChevronRight size={8} className="text-gray-600"/>
                  <span>Backend</span> <ChevronRight size={8} className="text-gray-600"/>
@@ -801,7 +801,7 @@ const LeftRail = () => (
      <div className="w-6 h-6 rounded bg-purple-600/20 text-purple-400 flex flex-col items-center justify-center shrink-0 border border-purple-500/30 mb-1">
        <GraduationCap size={12} />
      </div>
-     <div className="flex flex-col gap-3.5 text-white/30">
+     <div className="flex flex-col gap-3.5 text-zinc-400">
        <LayoutDashboard size={12} className="hover:text-white transition-colors cursor-pointer" />
        <Activity size={12} className="hover:text-white transition-colors cursor-pointer" />
        <FileSignature size={12} className="hover:text-white transition-colors cursor-pointer" />
@@ -822,11 +822,11 @@ const AcademicBulletinMini = () => (
              <div className="font-semibold text-white/90 text-[10px] flex items-center gap-1.5">
                Academic Bulletin
              </div>
-             <div className="text-[7px] text-white/40 uppercase tracking-widest mt-0.5">Announcements, notices, events, and calendar</div>
+             <div className="text-[7px] text-zinc-400 uppercase tracking-widest mt-0.5">Announcements, notices, events, and calendar</div>
            </div>
            <div className="flex gap-1.5">
               {['I Year', 'II Year', 'III Year', 'IV Year'].map((yr, i) => (
-                <span key={yr} className={cn("text-[6px] px-1.5 py-0.5 rounded border border-white/10", i === 2 ? "text-purple-400 bg-purple-500/10 border-purple-500/30 font-bold" : "text-white/40 bg-[#161616]")}>{yr}</span>
+                <span key={yr} className={cn("text-[6px] px-1.5 py-0.5 rounded border border-white/10", i === 2 ? "text-purple-400 bg-purple-500/10 border-purple-500/30 font-bold" : "text-zinc-400 bg-[#161616]")}>{yr}</span>
               ))}
            </div>
         </div>
@@ -850,7 +850,7 @@ const AcademicBulletinMini = () => (
                            <span className="text-[5.5px] text-white/50 truncate mt-[1px]">{item.sub}</span>
                          </div>
                        </div>
-                       <span className="text-[6px] text-white/40 font-mono shrink-0 ml-1">{item.date}</span>
+                       <span className="text-[6px] text-zinc-400 font-mono shrink-0 ml-1">{item.date}</span>
                     </div>
                  ))}
               </div>
@@ -883,7 +883,7 @@ const AcademicBulletinMini = () => (
                 <div className="text-[7px] uppercase tracking-widest text-white/50 font-bold px-2 py-1.5 border-b border-white/5 bg-[#161616]">Calendar: May 2026</div>
                 <div className="flex-1 flex flex-col min-h-0">
                    <div className="p-1.5 shrink-0">
-                     <div className="grid grid-cols-7 gap-0.5 mb-1 text-[6px] text-white/30 text-center font-medium">
+                     <div className="grid grid-cols-7 gap-0.5 mb-1 text-[6px] text-zinc-400 text-center font-medium">
                         <span>S</span><span>M</span><span>T</span><span>W</span><span>T</span><span>F</span><span>S</span>
                      </div>
                      <div className="grid grid-cols-7 gap-0.5">
@@ -902,7 +902,7 @@ const AcademicBulletinMini = () => (
                       <div className="bg-[#161616] rounded border border-white/5 p-1.5 flex flex-col gap-0.5">
                         <div className="text-[5.5px] text-white/50 uppercase tracking-widest font-bold">Selected Date</div>
                         <div className="text-[6.5px] text-purple-400 font-medium leading-tight mt-0.5">11 May — Industry Expert Talk</div>
-                        <div className="text-[5.5px] text-white/40 font-mono">10:00 AM · Main Auditorium</div>
+                        <div className="text-[5.5px] text-zinc-400 font-mono">10:00 AM · Main Auditorium</div>
                       </div>
                       <div className="bg-[#161616] rounded border border-white/5 p-1.5 flex flex-col gap-1">
                         <div className="text-[5.5px] text-white/50 uppercase tracking-widest font-bold mb-0.5">Upcoming</div>
@@ -957,7 +957,7 @@ const AcademicBulletinMini = () => (
                   <span className="text-blue-400 mt-[1px]">•</span><span className="text-white/80 leading-tight">Symposium reminder</span>
                 </div>
                 <div className="flex items-start gap-1.5">
-                  <span className="text-white/20 mt-[1px]">•</span><span className="text-white/40 leading-tight italic">Waiting for approval</span>
+                  <span className="text-white/20 mt-[1px]">•</span><span className="text-zinc-400 leading-tight italic">Waiting for approval</span>
                 </div>
               </div>
             </div>
@@ -993,7 +993,7 @@ const RequestsPipelineMini = () => (
              <div className="font-semibold text-white/90 text-[10px] flex items-center gap-1.5">
                 Requests & Pipelines
              </div>
-             <div className="text-[7px] text-white/40 uppercase tracking-widest mt-0.5">Unified OD and Leave approvals with stage health</div>
+             <div className="text-[7px] text-zinc-400 uppercase tracking-widest mt-0.5">Unified OD and Leave approvals with stage health</div>
            </div>
            <div className="flex gap-1.5">
               <span className="text-[6px] px-1.5 py-0.5 rounded border border-white/10 text-white/60 bg-[#161616]">SLA &lt; 24h</span>
@@ -1046,7 +1046,7 @@ const RequestsPipelineMini = () => (
                  </div>
                  
                  {/* Top segmented bar labels */}
-                 <div className="flex text-[5.5px] text-white/40 font-medium uppercase tracking-widest px-1">
+                 <div className="flex text-[5.5px] text-zinc-400 font-medium uppercase tracking-widest px-1">
                    <div className="flex-1 text-center truncate">Submitted</div>
                    <div className="flex-1 text-center truncate">Counselor</div>
                    <div className="flex-1 text-center truncate">Event</div>
@@ -1114,7 +1114,7 @@ const RequestsPipelineMini = () => (
                          </div>
                          <div className="flex items-center gap-1.5 shrink-0">
                            <span className={cn("px-1 py-[1.5px] rounded text-[4.5px] uppercase font-bold tracking-wider", item.c)}>{item.stat}</span>
-                           <span className="text-white/40 font-mono w-[3ch] text-right">{item.t}</span>
+                           <span className="text-zinc-400 font-mono w-[3ch] text-right">{item.t}</span>
                          </div>
                        </div>
                     ))}
@@ -1141,7 +1141,7 @@ const RequestsPipelineMini = () => (
                           <span className="text-[9px] font-bold text-white leading-none font-mono tracking-tighter">18h</span>
                         </div>
                       </div>
-                      <span className="text-[4.5px] text-white/40 uppercase tracking-widest font-semibold bg-[#1A1A1A] px-1.5 py-[1px] rounded border border-white/5">Target 24h</span>
+                      <span className="text-[4.5px] text-zinc-400 uppercase tracking-widest font-semibold bg-[#1A1A1A] px-1.5 py-[1px] rounded border border-white/5">Target 24h</span>
                     </div>
                     
                     <div className="flex-1 flex flex-col justify-center gap-[2px] text-[6px] ml-0.5">
@@ -1240,11 +1240,11 @@ const AdminDashboardMini = () => (
                   <div className="font-semibold text-white/90 text-[10px] flex items-center gap-1.5">
                     CampusVidhya Control Center
                   </div>
-                  <div className="text-[7px] text-white/40 uppercase tracking-widest mt-0.5">Academic Operations Dashboard</div>
+                  <div className="text-[7px] text-zinc-400 uppercase tracking-widest mt-0.5">Academic Operations Dashboard</div>
                 </div>
                 <div className="flex bg-[#161616] rounded border border-white/5 p-0.5">
                    {['Student', 'Faculty', 'Staff', 'Admin'].map((role, i) => (
-                     <div key={role} className={cn("px-2 py-0.5 rounded text-[7px] font-medium cursor-default transition-colors", i === 3 ? "bg-white/10 text-white shadow-sm" : "text-white/40")}>{role}</div>
+                     <div key={role} className={cn("px-2 py-0.5 rounded text-[7px] font-medium cursor-default transition-colors", i === 3 ? "bg-white/10 text-white shadow-sm" : "text-zinc-400")}>{role}</div>
                    ))}
                 </div>
              </div>
@@ -1284,7 +1284,7 @@ const AdminDashboardMini = () => (
                               <div key={i} className="bg-[#161616] py-1.5 px-2 rounded border border-white/5 flex justify-between items-center group shadow-[inset_0_1px_1px_rgba(255,255,255,0.02)]">
                                 <div className="flex flex-col gap-[2px]">
                                   <span className="text-[8px] text-white/80 font-medium tracking-wide">{item.req}</span>
-                                  <span className="text-[7px] text-white/40">{item.meta}</span>
+                                  <span className="text-[7px] text-zinc-400">{item.meta}</span>
                                 </div>
                                 <div className="px-1.5 py-0.5 text-center bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 rounded text-[7px] font-bold uppercase tracking-wider cursor-pointer hover:bg-emerald-500/20 transition-colors">Approve</div>
                               </div>
@@ -1321,8 +1321,8 @@ const AdminDashboardMini = () => (
                         <div className="flex items-center justify-between border-b border-white/5 px-2 py-1 bg-[#161616]">
                           <div className="text-[7px] text-white/50 uppercase tracking-widest font-bold flex items-center gap-1"><TrendingUp size={8}/> Performance Trends</div>
                           <div className="flex gap-1.5">
-                            <div className="flex items-center gap-0.5"><div className="w-1 h-1 rounded-full bg-emerald-500 shadow-[0_0_2px_#10b981]"></div><span className="text-[6px] text-white/40 font-medium">Credits</span></div>
-                            <div className="flex items-center gap-0.5"><div className="w-1 h-1 rounded-full bg-blue-500 shadow-[0_0_2px_#3b82f6]"></div><span className="text-[6px] text-white/40 font-medium">Attendance</span></div>
+                            <div className="flex items-center gap-0.5"><div className="w-1 h-1 rounded-full bg-emerald-500 shadow-[0_0_2px_#10b981]"></div><span className="text-[6px] text-zinc-400 font-medium">Credits</span></div>
+                            <div className="flex items-center gap-0.5"><div className="w-1 h-1 rounded-full bg-blue-500 shadow-[0_0_2px_#3b82f6]"></div><span className="text-[6px] text-zinc-400 font-medium">Attendance</span></div>
                           </div>
                         </div>
                         <div className="flex-1 px-1.5 pb-2 pt-1 relative flex items-end">
@@ -1349,7 +1349,7 @@ const AdminDashboardMini = () => (
                                   <path d="M0,32 C15,32 30,18 50,22 C70,26 85,15 100,18" fill="none" stroke="#10b981" strokeWidth="1.5" />
                                   <path d="M0,32 C15,32 30,18 50,22 C70,26 85,15 100,18 L100,40 L0,40 Z" fill="url(#gradEmerald)" opacity="0.3" />
                                </svg>
-                               <div className="absolute -bottom-1.5 left-1 right-1 flex justify-between text-[5px] text-white/30 font-mono">
+                               <div className="absolute -bottom-1.5 left-1 right-1 flex justify-between text-[5px] text-zinc-400 font-mono">
                                  <span>Jul</span><span>Aug</span><span>Sep</span><span>Oct</span><span>Nov</span><span>Dec</span>
                                </div>
                            </div>

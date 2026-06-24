@@ -1,7 +1,7 @@
 import React from "react";
 import dynamic from "next/dynamic";
 import Link from "next/link";
-import { ProjectScene } from "@/components/ui/ProjectScene";
+const ProjectScene = dynamic(() => import("@/components/ui/ProjectScene").then(mod => mod.ProjectScene), { ssr: false });
 
 const InfenixMockup = dynamic(() => import("@/components/ui/Mockups").then(m => m.InfenixMockup), { ssr: false });
 const VartalapMockup = dynamic(() => import("@/components/ui/Mockups").then(m => m.VartalapMockup), { ssr: false });

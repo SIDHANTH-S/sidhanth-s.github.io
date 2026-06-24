@@ -2,7 +2,7 @@ import { constructMetadata } from "@/lib/seo";
 import { generateBreadcrumbSchema } from "@/lib/schema";
 import { Experience } from "@/components/Experience";
 import { Skills } from "@/components/Skills";
-import GitHubActivity from "@/components/GitHubActivity";
+import { LazyGitHubSection } from "@/components/LazyGitHubSection";
 
 export const metadata = constructMetadata({
   title: "Experience | Sidhanth S",
@@ -44,7 +44,7 @@ export default function ExperiencePage() {
 
       <Experience />
       <Skills />
-      <GitHubActivity />
+      <LazyGitHubSection />
     </div>
   );
 }

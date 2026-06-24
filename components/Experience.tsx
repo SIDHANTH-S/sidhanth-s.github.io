@@ -95,7 +95,7 @@ export const Experience = () => {
                 <div
                   className={`w-full md:w-[45%] ${i % 2 === 0 ? "md:text-right md:pr-12" : "md:order-2 md:pl-12"}`}
                 >
-                  <div className="font-mono text-[10px] uppercase tracking-widest text-white/40 mb-2">
+                  <div className="font-mono text-[10px] uppercase tracking-widest text-zinc-400 mb-2">
                     {exp.duration}
                   </div>
                   <h3 className="font-display text-2xl font-bold tracking-tight text-ink group-hover:text-white transition-colors">

@@ -409,12 +409,12 @@ export const Contact = () => {
           viewport={{ once: true }}
           className="w-full"
         >
-          <span className="font-mono text-xs uppercase tracking-widest text-white/40 mb-6 block">
+          <span className="font-mono text-xs uppercase tracking-widest text-zinc-400 mb-6 block">
             010 / End of Portfolio
           </span>
           <h2 className="font-display text-[60px] md:text-[84px] font-black tracking-tighter leading-[0.85] uppercase mb-6 text-white">
             <RollingText text="Let's build " />
-            <span className="text-white/40 italic font-serif font-normal lowercase">
+            <span className="text-zinc-400 italic font-serif font-normal lowercase">
               something useful.
             </span>
           </h2>
@@ -428,7 +428,7 @@ export const Contact = () => {
           <ProfileCard />
         </motion.div>
 
-        <div className="w-full mt-16 md:mt-32 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center text-white/40 font-mono text-[10px] uppercase tracking-widest gap-4">
+        <div className="w-full mt-16 md:mt-32 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center text-zinc-400 font-mono text-[10px] uppercase tracking-widest gap-4">
           <span>&copy; {new Date().getFullYear()} Sidhanth S.</span>
           <span>Built with intent.</span>
         </div>

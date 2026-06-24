@@ -233,7 +233,7 @@ export const Skills = () => {
             >
               <div className="mb-6 flex items-center justify-between">
                 <div>
-                  <span className="text-[10px] font-mono text-white/30 mb-1 block tracking-widest leading-none">
+                  <span className="text-[10px] font-mono text-zinc-400 mb-1 block tracking-widest leading-none">
                     {group.id}
                   </span>
                   <h3 className="font-display text-lg font-bold text-ink uppercase tracking-tight">
@@ -245,7 +245,7 @@ export const Skills = () => {
               <div className="space-y-6 flex-1">
                 {group.subgroups.map((sub) => (
                   <div key={sub.name} className="space-y-3">
-                    <h4 className="text-[9px] font-mono font-bold text-white/30 uppercase tracking-[0.2em] border-b border-white/5 pb-1">
+                    <h4 className="text-[9px] font-mono font-bold text-zinc-400 uppercase tracking-[0.2em] border-b border-white/5 pb-1">
                       {sub.name}
                     </h4>
 
@@ -262,7 +262,7 @@ export const Skills = () => {
                           </span>
 
                           {index < sub.skills.length - 1 && (
-                            <span className="text-white/10 ml-0.5 text-[10px]">
+                            <span className="text-zinc-500 ml-0.5 text-[10px]">
                               ·
                             </span>
                           )}
