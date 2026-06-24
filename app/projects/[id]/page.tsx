@@ -11,9 +11,9 @@ interface PageProps {
 const slugToIdMap: Record<string, string> = {
   "campusvidhya": "campusvidhya",
   "infenix": "infenix",
-  "vartalapai": "vartalap",
-  "codelens-ai": "codelens",
-  "energy-forecast": "energy",
+  "vartalap": "vartalap",
+  "codelens": "codelens",
+  "energy": "energy",
 };
 
 const projectMetadataMap: Record<string, { title: string; description: string }> = {
@@ -25,15 +25,15 @@ const projectMetadataMap: Record<string, { title: string; description: string }>
     title: "Infenix | Case Study by Sidhanth S",
     description: "An AI learning assistant built with React and Prompt Workflows for structured technical learning.",
   },
-  "vartalapai": {
+  "vartalap": {
     title: "VartalapAI | Case Study by Sidhanth S",
     description: "An AI-assisted business intelligence workspace using OCR and forecasting for Indian MSMEs.",
   },
-  "codelens-ai": {
+  "codelens": {
     title: "CodeLens AI | Case Study by Sidhanth S",
     description: "An AI-powered repository intelligence tool mapping code architecture and dependencies for faster developer onboarding.",
   },
-  "energy-forecast": {
+  "energy": {
     title: "Energy Forecast Console | Case Study by Sidhanth S",
     description: "A time-series forecasting dashboard for electricity demand built with Python, Prophet, and React.",
   },
@@ -58,9 +58,9 @@ export async function generateStaticParams() {
   return [
     { id: "campusvidhya" },
     { id: "infenix" },
-    { id: "vartalapai" },
-    { id: "codelens-ai" },
-    { id: "energy-forecast" },
+    { id: "vartalap" },
+    { id: "codelens" },
+    { id: "energy" },
   ];
 }
 

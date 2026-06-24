@@ -81,7 +81,7 @@ function MobileBlocks() {
               style={{
                 fontFamily: 'var(--font-sans)',
                 fontSize: 13,
-                color: 'rgba(255,255,255,0.25)',
+                color: 'rgba(255,255,255,0.6)',
                 fontStyle: 'italic',
                 marginBottom: 16,
                 lineHeight: 1.6,
@@ -120,7 +120,7 @@ function MobileBlocks() {
               style={{
                 fontFamily: 'var(--font-sans)',
                 fontSize: 14,
-                color: 'rgba(255,255,255,0.38)',
+                color: 'rgba(255,255,255,0.7)',
                 lineHeight: 1.7,
               }}
               initial={{ opacity: 0 }}
@@ -253,7 +253,7 @@ function ScrollPanel() {
                   style={{
                     fontFamily: 'var(--font-sans)',
                     fontSize: 14,
-                    color: `rgba(255,255,255,${0.25 * accent + 0.08 * (1 - accent)})`,
+                    color: `rgba(255,255,255,${0.6 * accent + 0.6 * (1 - accent)})`,
                     fontStyle: 'italic',
                     marginBottom: 20,
                     lineHeight: 1.6,
@@ -284,7 +284,7 @@ function ScrollPanel() {
                   style={{
                     fontFamily: 'var(--font-sans)',
                     fontSize: 15,
-                    color: `rgba(255,255,255,${0.40 * accent + 0.10 * (1 - accent)})`,
+                    color: `rgba(255,255,255,${0.85 * accent + 0.25 * (1 - accent)})`,
                     lineHeight: 1.75,
                     maxWidth: '64ch',
                   }}
@@ -333,7 +333,7 @@ export const AboutBrief = () => {
               fontSize: 11,
               textTransform: 'uppercase',
               letterSpacing: '0.2em',
-              color: 'rgba(255,255,255,0.2)',
+              color: 'rgba(255,255,255,0.6)',
               marginBottom: 40,
             }}
             initial={{ opacity: 0 }}
@@ -349,7 +349,7 @@ export const AboutBrief = () => {
             style={{
               fontFamily: 'var(--font-sans)',
               fontSize: 15,
-              color: 'rgba(255,255,255,0.48)',
+              color: 'rgba(255,255,255,0.7)',
               lineHeight: 1.75,
               marginBottom: 40,
             }}
@@ -372,7 +372,7 @@ export const AboutBrief = () => {
             style={{
               fontFamily: 'var(--font-sans)',
               fontSize: 13,
-              color: 'rgba(255,255,255,0.22)',
+              color: 'rgba(255,255,255,0.6)',
               fontStyle: 'italic',
               marginTop: 48,
             }}
@@ -390,7 +390,7 @@ export const AboutBrief = () => {
           <div className="w-full max-w-6xl mx-auto px-6 lg:px-12 pt-32">
             {/* Label */}
             <motion.p
-              className="font-mono text-[11px] uppercase tracking-[0.2em] text-white/20 mb-20"
+              className="font-mono text-[11px] uppercase tracking-[0.2em] text-white/60 mb-20"
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
@@ -401,7 +401,7 @@ export const AboutBrief = () => {
 
             {/* Intro */}
             <motion.p
-              className="text-white/50 font-sans text-base leading-relaxed max-w-2xl mb-20"
+              className="text-white/70 font-sans text-base leading-relaxed max-w-2xl mb-20"
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
@@ -422,7 +422,7 @@ export const AboutBrief = () => {
           {/* Closing */}
           <div className="w-full max-w-6xl mx-auto px-6 lg:px-12 pb-32">
             <motion.p
-              className="font-sans text-white/25 text-sm font-normal italic mt-16"
+              className="font-sans text-white/60 text-sm font-normal italic mt-16"
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}

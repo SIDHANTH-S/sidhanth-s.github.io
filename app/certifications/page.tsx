@@ -21,13 +21,18 @@ export default function CertificationsPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
       
-      <div className="w-full max-w-6xl mx-auto px-6 lg:px-12 pt-32 mb-8">
-        <h1 className="font-display text-[60px] md:text-[84px] font-black tracking-tighter leading-[0.85] text-ink uppercase">
-          Certifications
-        </h1>
-      </div>
-
-      <Credentials />
+      <main className="pt-24 pb-12">
+        <div className="w-full max-w-6xl mx-auto px-6 lg:px-12 pb-8">
+          <h1 className="text-4xl font-bold text-center text-white mb-6">Certifications</h1>
+          <h2 className="text-white/80 font-sans text-xl font-medium mb-4 max-w-2xl text-center mx-auto">
+            Professional Credentials & Qualifications
+          </h2>
+          <p className="text-white/60 font-sans text-base leading-relaxed max-w-3xl text-center mx-auto">
+            Formal validations of my technical expertise and ongoing learning. This collection includes verified certifications from industry leaders such as ServiceNow and Harvard University. These credentials demonstrate my commitment to mastering enterprise systems, full-stack architecture, workflow administration, and foundational computer science principles. Explore the interactive cards below to view the official documentation.
+          </p>
+        </div>
+        <Credentials />
+      </main>
     </div>
   );
 }

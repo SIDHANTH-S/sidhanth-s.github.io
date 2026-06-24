@@ -11,7 +11,7 @@ const CodeToolMockup = dynamic(() => import("@/components/ui/Mockups").then(m =>
 const EnergyForecastMockup = dynamic(() => import("@/components/ui/Mockups").then(m => m.EnergyForecastMockup));
 
 export const metadata = constructMetadata({
-  title: "Projects | Sidhanth S",
+  title: "Projects | Full-Stack & AI Systems by Sidhanth S",
   description: "A collection of scalable software systems, AI-powered applications, and workflow automation tools.",
   url: "https://sidhanth-s.github.io/projects",
 });

@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://sidhanth-s.github.io'),
   title: 'Sidhanth S — Software Engineer',
   description:
-    'Software Engineer and Full-Stack Developer based in Chennai, India building software products, workflow platforms, developer tools, and modern web applications.',
+    'Software Engineer building AI systems, workflow platforms, developer tools, and modern web applications.',
   authors: [{ name: 'Sidhanth S' }],
   creator: 'Sidhanth S',
   publisher: 'Sidhanth S',

@@ -36,10 +36,16 @@ export default function ExperiencePage() {
         }}
       />
       
-      <div className="w-full max-w-6xl mx-auto px-6 lg:px-12 pt-32">
-        <h1 className="font-display text-[60px] md:text-[84px] font-black tracking-tighter leading-[0.85] text-ink uppercase">
+      <div className="w-full max-w-6xl mx-auto px-6 lg:px-12 pt-32 pb-8">
+        <h1 className="font-display text-[60px] md:text-[84px] font-black tracking-tighter leading-[0.85] text-ink uppercase mb-6">
           Experience
         </h1>
+        <h2 className="text-white/80 font-sans text-xl font-medium mb-4 max-w-2xl">
+          Technical Expertise & Professional Journey
+        </h2>
+        <p className="text-white/60 font-sans text-base leading-relaxed max-w-3xl">
+          A comprehensive overview of my professional engineering experience, including my role as the founder and lead developer of CampusVidhya. This section details my technical skills across full-stack web development, AI integration, and systems architecture. Building production-grade workflows and reliable digital infrastructure requires not just knowing the stack, but understanding how it operates under pressure. Below you will find my complete work history, the specific technologies I specialize in, and a live log of my GitHub contributions.
+        </p>
       </div>
 
       <Experience />

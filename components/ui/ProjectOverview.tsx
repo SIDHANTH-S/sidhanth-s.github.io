@@ -75,12 +75,14 @@ export function ProjectOverview({
 
         <a
           href="#"
+          aria-label="View Project Code"
           className="w-12 h-12 md:w-14 md:h-14 flex items-center justify-center rounded-full border border-neutral-800 text-neutral-400 hover:text-white hover:border-neutral-600 hover:bg-neutral-900 transition-all"
         >
           <Github size={20} />
         </a>
         <a
           href="#"
+          aria-label="View Live Project"
           className="w-12 h-12 md:w-14 md:h-14 flex items-center justify-center rounded-full border border-neutral-800 text-neutral-400 hover:text-white hover:border-neutral-600 hover:bg-neutral-900 transition-all"
         >
           <ExternalLink size={20} />

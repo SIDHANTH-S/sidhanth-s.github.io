@@ -4,7 +4,7 @@ import { AboutBrief } from "@/components/AboutBrief";
 import WhoIs from "@/components/WhoIs";
 
 export const metadata = constructMetadata({
-  title: "About | Sidhanth S",
+  title: "About Sidhanth S | Software Engineer",
   description: "Learn more about Sidhanth S, a Software Engineer and Full-Stack Developer based in Chennai, India.",
   url: "https://sidhanth-s.github.io/about",
 });
@@ -41,9 +41,12 @@ export default function AboutPage() {
       />
       
       <div className="w-full max-w-6xl mx-auto px-6 lg:px-12 pt-32 pb-8">
-        <h1 className="font-display text-[60px] md:text-[84px] font-black tracking-tighter leading-[0.85] text-ink uppercase">
+        <h1 className="font-display text-[60px] md:text-[84px] font-black tracking-tighter leading-[0.85] text-ink uppercase mb-6">
           About
         </h1>
+        <h2 className="text-white/80 font-sans text-xl font-medium mb-4 max-w-2xl">
+          Software Engineer & Full-Stack Developer
+        </h2>
       </div>
 
       <WhoIs />
