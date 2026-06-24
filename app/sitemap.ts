@@ -5,7 +5,7 @@ export const dynamic = 'force-static';
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
     {
-      url: 'https://sidhanth-s.github.io',
+      url: 'https://sidhanth-s.github.io/',
       lastModified: '2026-05-26',
       changeFrequency: 'weekly',
       priority: 1,
@@ -35,19 +35,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.7,
     },
     {
-      url: 'https://sidhanth-s.github.io/projects/vartalapai',
+      url: 'https://sidhanth-s.github.io/projects/vartalap',
       lastModified: new Date('2026-06-20'),
       changeFrequency: 'monthly',
       priority: 0.7,
     },
     {
-      url: 'https://sidhanth-s.github.io/projects/codelens-ai',
+      url: 'https://sidhanth-s.github.io/projects/codelens',
       lastModified: new Date('2026-06-20'),
       changeFrequency: 'monthly',
       priority: 0.7,
     },
     {
-      url: 'https://sidhanth-s.github.io/projects/energy-forecast',
+      url: 'https://sidhanth-s.github.io/projects/energy',
       lastModified: new Date('2026-06-20'),
       changeFrequency: 'monthly',
       priority: 0.7,
@@ -69,18 +69,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: new Date('2026-06-20'),
       changeFrequency: 'monthly',
       priority: 0.8,
-    },
-    {
-      url: 'https://sidhanth-s.github.io/llms.txt',
-      lastModified: new Date('2026-06-20'),
-      changeFrequency: 'monthly',
-      priority: 0.5,
-    },
-    {
-      url: 'https://sidhanth-s.github.io/llms-full.txt',
-      lastModified: new Date('2026-06-20'),
-      changeFrequency: 'monthly',
-      priority: 0.5,
     },
   ];
 }
