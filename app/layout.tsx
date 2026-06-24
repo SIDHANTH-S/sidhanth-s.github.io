@@ -152,9 +152,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                   {
                     "@type": "EducationalOccupationalCredential",
                     "name": "ServiceNow Certified Application Developer"
+                  }
                 ]
-              }
-            )
+            })
           }}
         />
 
