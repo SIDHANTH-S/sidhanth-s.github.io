@@ -1,29 +1,27 @@
 'use client';
 import React, { useEffect, useState } from "react";
 import dynamic from "next/dynamic";
-
-import { ScrollProgress } from "@/components/ui/ScrollProgress";
 import { Hero } from "@/components/Hero";
 import { setLenisInstance } from "@/lib/scroll-lock";
 import { AboutBrief } from "@/components/AboutBrief";
 import WhoIs from "@/components/WhoIs";
-import { useInView } from "motion/react";
+import { useInView } from "@/hooks/use-in-view";
 import { useRef } from "react";
 
 const GitHubActivity = dynamic(() => import("@/components/GitHubActivity"), { ssr: false });
 const ProjectsSection = dynamic(() => import("@/components/ProjectsSection"), { ssr: true });
-const Experience = dynamic(() => import("@/components/Experience").then(mod => mod.Experience));
-const Skills = dynamic(() => import("@/components/Skills").then(mod => mod.Skills));
-const Credentials = dynamic(() => import("@/components/Credentials").then(mod => mod.Credentials));
-const Contact = dynamic(() => import("@/components/Contact").then(mod => mod.Contact));
+const Experience = dynamic(() => import("@/components/Experience").then(mod => mod.Experience), { loading: () => <div className="h-[800px] w-full animate-pulse bg-white/5 rounded-3xl my-8" /> });
+const Skills = dynamic(() => import("@/components/Skills").then(mod => mod.Skills), { loading: () => <div className="h-[600px] w-full animate-pulse bg-white/5 rounded-3xl my-8" /> });
+const Credentials = dynamic(() => import("@/components/Credentials").then(mod => mod.Credentials), { loading: () => <div className="h-[800px] w-full animate-pulse bg-white/5 rounded-3xl my-8" /> });
+const Contact = dynamic(() => import("@/components/Contact").then(mod => mod.Contact), { loading: () => <div className="h-[400px] w-full animate-pulse bg-white/5 rounded-3xl my-8" /> });
 
 import Link from "next/link";
 import { VerticalNavDots } from "@/components/VerticalNavDots";
 import { MobileNav } from "@/components/MobileNav";
 
 export default function HomeClient() {
-  const githubRef = useRef(null);
-  const showGithub = useInView(githubRef, { once: true, margin: "200px" });
+  const lowerContentRef = useRef(null);
+  const showLowerContent = useInView(lowerContentRef, { once: true, margin: "800px" });
 
   useEffect(() => {
     // Delay Lenis initialization to not block the main thread during hydration/first paint
@@ -41,6 +39,7 @@ export default function HomeClient() {
         touchMultiplier: 2,
       });
 
+      lenisInstance = lenis;
       setLenisInstance(lenis);
 
       let animationFrameId = 0;
@@ -62,7 +61,8 @@ export default function HomeClient() {
     };
 
     let timeoutId: NodeJS.Timeout;
-    let idleId: number;
+    let idleId: number | undefined;
+    let lenisInstance: any = null;
 
     if ('requestIdleCallback' in window) {
       idleId = requestIdleCallback(() => {
@@ -73,11 +73,10 @@ export default function HomeClient() {
     }
 
     return () => {
-      if (idleId) cancelIdleCallback(idleId);
+      if (idleId !== undefined) cancelIdleCallback(idleId);
       if (timeoutId) clearTimeout(timeoutId);
-      const instance = require("@/lib/scroll-lock").getLenisInstance();
-      if (instance && instance._customCleanup) {
-        instance._customCleanup();
+      if (lenisInstance && lenisInstance._customCleanup) {
+        lenisInstance._customCleanup();
       }
     };
   }, []);
@@ -85,7 +84,6 @@ export default function HomeClient() {
   return (
     <div className="relative w-full bg-paper font-sans text-ink mx-auto overflow-clip">
 
-      <ScrollProgress />
       <VerticalNavDots />
       <MobileNav />
 
@@ -102,24 +100,28 @@ export default function HomeClient() {
         <WhoIs />
 
         <ProjectsSection />
-        
-        <div ref={githubRef}>
-          {showGithub && <GitHubActivity />}
+
+        <div ref={lowerContentRef}>
+          {showLowerContent && (
+            <>
+              <GitHubActivity />
+              <Experience />
+              <div className="w-full text-center pb-24 bg-paper relative z-20">
+                   <Link href="/experience" className="text-white font-mono text-xs tracking-widest uppercase border border-white/20 px-6 py-3 rounded-full hover:bg-white/10 transition-colors" aria-label="View Experience Details">
+                      View Experience Details →
+                   </Link>
+              </div>
+              <Skills />
+              <Credentials />
+              <div className="w-full text-center pb-24 bg-paper relative z-20">
+                   <Link href="/certifications" className="text-white font-mono text-xs tracking-widest uppercase border border-white/20 px-6 py-3 rounded-full hover:bg-white/10 transition-colors" aria-label="View Certifications">
+                      View Certifications →
+                   </Link>
+              </div>
+              <Contact />
+            </>
+          )}
         </div>
-        <Experience />
-        <div className="w-full text-center pb-24 bg-paper relative z-20">
-             <Link href="/experience" className="text-white font-mono text-xs tracking-widest uppercase border border-white/20 px-6 py-3 rounded-full hover:bg-white/10 transition-colors" aria-label="View Experience Details">
-                View Experience Details →
-             </Link>
-        </div>
-        <Skills />
-        <Credentials />
-        <div className="w-full text-center pb-24 bg-paper relative z-20">
-             <Link href="/certifications" className="text-white font-mono text-xs tracking-widest uppercase border border-white/20 px-6 py-3 rounded-full hover:bg-white/10 transition-colors" aria-label="View Certifications">
-                View Certifications →
-             </Link>
-        </div>
-        <Contact />
       </main>
     </div>
   );
