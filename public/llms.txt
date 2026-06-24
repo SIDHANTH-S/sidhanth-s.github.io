@@ -15,9 +15,36 @@
 
 ## Summary
 
-Sidhanth S is a Software Engineer based in Chennai, India.
+Sidhanth S is a Software Engineer and Full-Stack Developer based in Chennai, India.
 
-He builds software products, workflow platforms, developer tools, and modern web applications.
+His work focuses on software systems, workflow automation, developer platforms, AI-assisted applications, and modern web engineering. He builds products that combine technical architecture, operational workflows, and user experience into production-ready systems.
+
+## Expertise
+
+- Software Engineering
+- Full-Stack Development
+- ServiceNow Development
+- Workflow Automation
+- React
+- Next.js
+- Java
+- Python
+- Artificial Intelligence
+- Cloud Computing
+- Developer Platforms
+- System Design
+
+## ServiceNow
+
+- ServiceNow Certified Application Developer (CAD)
+- ServiceNow Certified System Administrator (CSA)
+
+Focus Areas:
+
+- Application Development
+- Flow Designer
+- Workflow Automation
+- Platform Administration
 
 ## Projects
 
@@ -29,6 +56,7 @@ He builds software products, workflow platforms, developer tools, and modern web
 
 ## Profiles
 
+- [Credly](https://www.credly.com/users/sidhanth-s)
 - [GitHub](https://github.com/SIDHANTH-S)
 - [LinkedIn](https://www.linkedin.com/in/sidhanth-s)
 - [Devpost](https://devpost.com/SIDHANTH-S)

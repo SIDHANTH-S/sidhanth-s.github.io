@@ -67,14 +67,20 @@ export const metadata: Metadata = {
   applicationName: 'Sidhanth S Portfolio',
   referrer: 'origin-when-cross-origin',
   keywords: [
-  'Sidhanth S',
-  'Software Engineer',
-  'Full-Stack Developer',
-  'Developer',
-  'Builder',
-  'Chennai',
-  'India',
-],
+    "Sidhanth S",
+    "Software Engineer",
+    "Full Stack Developer",
+    "ServiceNow Developer",
+    "Certified Application Developer",
+    "ServiceNow CSA",
+    "AI Developer",
+    "Workflow Automation",
+    "React Developer",
+    "Next.js Developer",
+    "Cloud Computing",
+    "Chennai",
+    "India"
+  ],
   formatDetection: {
     email: false,
     address: false,
@@ -90,63 +96,65 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <meta name="theme-color" content="#000000" />
         <meta name="color-scheme" content="dark" />
 
-        {/* GEO tags */}
-        <meta name="geo.region" content="IN-TN" />
-        <meta name="geo.placename" content="Chennai, Tamil Nadu, India" />
-
-
         {/* Person JSON-LD */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "Person",
-              "@id": "https://sidhanth-s.github.io/#person",
-              "name": "Sidhanth S",
-              "alternateName": ["Sidhanth"],
-              "url": "https://sidhanth-s.github.io",
-              "image": "https://sidhanth-s.github.io/Portrait.webp",
-              "jobTitle": "Software Engineer",
-              "description": "Software Engineer and Full-Stack Developer based in Chennai, India building software products, workflow platforms, developer tools, and modern web applications.",
-              "address": {
-                "@type": "PostalAddress",
-                "addressLocality": "Chennai",
-                "addressRegion": "Tamil Nadu",
-                "addressCountry": "IN"
-              },
-              "knowsAbout": [
-                "Software Engineering",
-                "Full-Stack Development",
-                "Artificial Intelligence",
-                "Machine Learning",
-                "React Development",
-                "Next.js",
-                "Developer Tooling",
-                "Workflow Automation",
-                "Java",
-                "Python"
-              ],
-              "sameAs": [
-                "https://github.com/SIDHANTH-S",
-                "https://www.linkedin.com/in/sidhanth-s",
-                "https://devpost.com/SIDHANTH-S"
-              ],
-              "hasCredential": [
-                {
-                  "@type": "EducationalOccupationalCredential",
-                  "name": "Oracle Cloud Infrastructure 2025 Certified Foundations Associate"
+                "@context": "https://schema.org",
+                "@type": "Person",
+                "@id": "https://sidhanth-s.github.io/#person",
+                "name": "Sidhanth S",
+                "alternateName": ["Sidhanth"],
+                "url": "https://sidhanth-s.github.io",
+                "image": "https://sidhanth-s.github.io/Portrait.webp",
+                "jobTitle": "Software Engineer",
+                "description": "Software Engineer and Full-Stack Developer based in Chennai, India building software products, workflow platforms, developer tools, and modern web applications.",
+                "address": {
+                  "@type": "PostalAddress",
+                  "addressLocality": "Chennai",
+                  "addressRegion": "Tamil Nadu",
+                  "addressCountry": "IN"
                 },
-                {
-                  "@type": "EducationalOccupationalCredential",
-                  "name": "Harvard CS50x"
-                },
-                {
-                  "@type": "EducationalOccupationalCredential",
-                  "name": "ServiceNow Certified System Administrator"
-                }
-              ]
-            })
+                "knowsAbout": [
+                  "Software Engineering",
+                  "Full-Stack Development",
+                  "Artificial Intelligence",
+                  "Workflow Automation",
+                  "ServiceNow",
+                  "Cloud Computing",
+                  "React",
+                  "Next.js",
+                  "Java",
+                  "Python",
+                  "System Design",
+                  "Developer Platforms"
+                ],
+                "sameAs": [
+                  "https://github.com/SIDHANTH-S",
+                  "https://www.linkedin.com/in/sidhanth-s",
+                  "https://devpost.com/SIDHANTH-S",
+                  "https://www.credly.com/users/sidhanth-s"
+                ],
+                "hasCredential": [
+                  {
+                    "@type": "EducationalOccupationalCredential",
+                    "name": "Oracle Cloud Infrastructure 2025 Certified Foundations Associate"
+                  },
+                  {
+                    "@type": "EducationalOccupationalCredential",
+                    "name": "Harvard CS50x"
+                  },
+                  {
+                    "@type": "EducationalOccupationalCredential",
+                    "name": "ServiceNow Certified System Administrator"
+                  },
+                  {
+                    "@type": "EducationalOccupationalCredential",
+                    "name": "ServiceNow Certified Application Developer"
+                ]
+              }
+            )
           }}
         />
 
