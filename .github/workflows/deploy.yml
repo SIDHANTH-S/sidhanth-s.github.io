@@ -4,6 +4,9 @@ on:
   push:
     branches: ["main"]
 
+env:
+  NEXT_PUBLIC_CLARITY_PROJECT_ID: xcddoparuq
+
 permissions:
   contents: read
   pages: write
