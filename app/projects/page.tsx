@@ -97,7 +97,7 @@ export default function ProjectsIndex() {
           </div>
         </Link>
 
-        <Link href="/projects/vartalapai" className="block group" aria-label="View VartalapAI project details">
+        <Link href="/projects/vartalap" className="block group" aria-label="View VartalapAI project details">
           <ProjectScene
             id="vartalap"
             alignIndex="03"
@@ -115,7 +115,7 @@ export default function ProjectsIndex() {
           </div>
         </Link>
 
-        <Link href="/projects/codelens-ai" className="block group" aria-label="View CodeLens AI project details">
+        <Link href="/projects/codelens" className="block group" aria-label="View CodeLens AI project details">
           <ProjectScene
             id="codelens"
             alignIndex="04"

@@ -1,9 +1,14 @@
-import type { NextConfig } from 'next';
+import type { NextConfig } from "next";
+import bundleAnalyzer from "@next/bundle-analyzer";
+
+const withBundleAnalyzer = bundleAnalyzer({
+  enabled: process.env.ANALYZE === "true",
+});
 
 const nextConfig: NextConfig = {
   reactStrictMode: true,
 
-  output: 'export',
+  output: "export",
 
   devIndicators: false,
 
@@ -17,17 +22,16 @@ const nextConfig: NextConfig = {
 
   images: {
     unoptimized: true,
-
     remotePatterns: [
       {
-        protocol: 'https',
-        hostname: 'picsum.photos',
-        pathname: '/**',
+        protocol: "https",
+        hostname: "picsum.photos",
+        pathname: "/**",
       },
     ],
   },
 
-  transpilePackages: ['motion'],
+  transpilePackages: ["motion"],
 };
 
-export default nextConfig;
+export default withBundleAnalyzer(nextConfig);

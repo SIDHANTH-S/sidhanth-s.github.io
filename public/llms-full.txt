@@ -61,7 +61,7 @@ Technologies:
 - Workflow Infrastructure
 
 Project:
-https://sidhanth-s.github.io/projects/vartalapai
+https://sidhanth-s.github.io/projects/vartalap
 
 ### CodeLens AI
 
@@ -75,7 +75,7 @@ Technologies:
 - AI Analysis
 
 Project:
-https://sidhanth-s.github.io/projects/codelens-ai
+https://sidhanth-s.github.io/projects/codelens
 
 ### Energy Forecast Console
 

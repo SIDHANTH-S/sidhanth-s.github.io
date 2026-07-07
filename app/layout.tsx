@@ -3,6 +3,7 @@ import { Inter, Space_Grotesk, Kaushan_Script } from 'next/font/google';
 import './globals.css';
 import { BackButton } from '@/components/BackButton';
 import ClarityProvider from "@/components/Clarity";
+import ScrollToTop from "@/components/ScrollToTop";
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-sans', display: 'swap' });
 const spaceGrotesk = Space_Grotesk({ subsets: ['latin'], variable: '--font-display', display: 'swap' });
@@ -242,6 +243,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         />
       </head>
       <body className={`${inter.variable} ${spaceGrotesk.variable} ${kaushanScript.variable}`}>
+        <ScrollToTop />
         <ClarityProvider />
         <BackButton />
         {children}

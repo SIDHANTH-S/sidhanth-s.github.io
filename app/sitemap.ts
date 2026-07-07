@@ -47,7 +47,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.7,
     },
     {
-      url: 'https://sidhanth-s.github.io/projects/energy',
+      url: 'https://sidhanth-s.github.io/projects/energy-forecast',
       lastModified: new Date('2026-06-20'),
       changeFrequency: 'monthly',
       priority: 0.7,
