@@ -49,3 +49,37 @@ body[style*="overflow: hidden"] .fixed.right-8.top-1\/2 {
   pointer-events: none !important;
   visibility: hidden !important;
 }
+
+/* ---- Herov2 Animations & Fonts ---- */
+@font-face { font-family: 'DM Sans:Regular'; font-style: normal; font-weight: 400; font-display: swap; src: url('https://static.figma.com/font/DMSans_opsz_wght__1') format('woff2'); }
+@font-face { font-family: 'Libre Baskerville:Regular'; font-style: normal; font-weight: 400; font-display: swap; src: url('https://static.figma.com/font/LibreBaskerville_wght__1') format('woff2'); }
+@font-face { font-family: 'Libre Baskerville:Italic'; font-style: italic; font-weight: 400; font-display: swap; src: url('https://static.figma.com/font/LibreBaskerville-Italic_wght__1') format('woff2'); }
+@font-face { font-family: 'Inter:Regular'; font-style: normal; font-weight: 400; font-display: swap; src: url('https://static.figma.com/font/Inter_1') format('woff2'); }
+@font-face { font-family: 'Space Grotesk:Regular'; font-style: normal; font-weight: 400; font-display: swap; src: url('https://static.figma.com/font/SpaceGrotesk_wght__1') format('woff2'); }
+@font-face { font-family: 'Consolas:Regular'; font-style: normal; font-weight: 400; font-display: swap; src: local('Consolas'), local('Menlo'), local('DejaVu Sans Mono'), local('monospace'); }
+@font-face { font-family: 'Consolas:Bold'; font-style: normal; font-weight: 700; font-display: swap; src: local('Consolas Bold'), local('Menlo Bold'), local('DejaVu Sans Mono Bold'), local('monospace'); }
+
+@keyframes hero-rise { from { transform: translateY(40px); } to { transform: none; } }
+@keyframes hero-letter { from { transform: translateY(0.4em); } to { transform: none; } }
+@keyframes hero-shuffle { from { transform: translate(var(--dx, 0px), var(--dy, 0px)) scale(0.5) rotate(var(--dr, 0deg)); } to { transform: none; } }
+@keyframes hero-fade { from { opacity: 0; } to { opacity: 1; } }
+
+.hero-reveal [data-name='Desktop - 2'] > [data-name='Container'], .hero-reveal [data-name='Arc text'], .hero-reveal [data-name='Tagline'], .hero-reveal [data-name='Hero Content'] > [data-name='Container'], .hero-reveal [data-name='Section Title'], .hero-reveal .hero-rise { animation: hero-rise 0.9s cubic-bezier(0.32, 0.72, 0.24, 1) both, hero-fade 0.9s linear both; animation-delay: var(--d, 0s); will-change: opacity, transform; }
+.hero-reveal [data-name='Desktop - 2'] > [data-name='Container'] { --d: 0.1s; }
+.hero-reveal [data-name='Arc text'] { --d: 0.8s; }
+.hero-reveal [data-name='Tagline'] { --d: 0.8s; }
+.hero-reveal [data-name='Hero Content'] > [data-name='Container'] { --d: 1.0s; }
+.hero-reveal [data-name='Section Title'] { --d: 1.2s; }
+.hero-reveal [data-name='Section - Hero'] > div:not([data-name]), .hero-reveal .hero-shuffle { animation: hero-shuffle 1.4s cubic-bezier(0.32, 0.72, 0.24, 1) both, hero-fade 1.4s linear both; animation-delay: var(--d, 0s); will-change: opacity, transform; }
+
+.hero-reveal [data-name='Section - Hero'] > div:nth-child(2) { --d: 0.1s; --dx: 280px; --dy: 120px; --dr: 35deg; }
+.hero-reveal [data-name='Section - Hero'] > div:nth-child(3) { --d: 0.25s; --dx: 150px; --dy: -130px; --dr: 19deg; }
+.hero-reveal [data-name='Section - Hero'] > div:nth-child(4) { --d: 0.4s; --dx: -150px; --dy: -130px; --dr: 12deg; }
+.hero-reveal [data-name='Section - Hero'] > div:nth-child(5) { --d: 0.55s; --dx: -190px; --dy: 90px; --dr: 32deg; }
+.hero-reveal [data-name="Heading 1"] p:not(:has(.hero-letter)),
+.hero-reveal [data-split-letters]:not(:has(.hero-letter)) {
+  opacity: 0;
+}
+
+.hero-reveal .hero-letter { animation: hero-letter 0.6s cubic-bezier(0.32, 0.72, 0.24, 1) both, hero-fade 0.6s linear both; animation-delay: calc(0.1s + var(--i, 0) * 0.03s); display: inline-block; white-space: pre; will-change: opacity, transform; }
+@media (prefers-reduced-motion: reduce) { .hero-reveal *, .hero-reveal .hero-letter { animation-duration: 0.01ms !important; animation-delay: 0ms !important; } }

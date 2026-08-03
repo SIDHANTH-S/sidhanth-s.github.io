@@ -1,7 +1,7 @@
 'use client';
 import React, { useEffect, useState } from "react";
 import dynamic from "next/dynamic";
-import { Hero } from "@/components/Hero";
+import Hero from "@/components/Herov2/Hero";
 import { setLenisInstance } from "@/lib/scroll-lock";
 import { AboutBrief } from "@/components/AboutBrief";
 import WhoIs from "@/components/WhoIs";
