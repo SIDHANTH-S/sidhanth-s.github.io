@@ -2617,7 +2617,7 @@ function Container87() {
 
 function SectionHero() {
   return (
-    <div className="-translate-x-1/2 absolute h-[397px] left-1/2 top-[239.67px] w-[1048px]" data-name="Section - Hero">
+    <div className="-translate-x-1/2 -translate-y-1/2 absolute h-[397px] left-1/2 top-1/2 w-[1048px]" data-name="Section - Hero">
       {/* <ArcText /> */}
       <HeroContent />
       <Container10 />
