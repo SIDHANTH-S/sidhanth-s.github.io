@@ -19,7 +19,7 @@ const CARD_W = 188
 // Portrait sibling: a 9:16 canvas, sized so the card covers about the same
 // area on the hero as the landscape ones rather than towering over them.
 const PORTRAIT_W = 540
-const PORTRAIT_H = 960
+const PORTRAIT_H = 740
 const PORTRAIT_CARD_W = 120
 
 type ShellProps = {

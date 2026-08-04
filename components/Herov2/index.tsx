@@ -1,3 +1,5 @@
+"use client";
+import { motion } from "framer-motion";
 import svgPaths from "./svg-jo09tmkj9w";
 import { RequestsPipelineCard, ControlCenterCard } from './DashboardCards'
 
@@ -145,7 +147,7 @@ function NavDesktop() {
 
 function Container() {
   return (
-    <div className="-translate-x-1/2 absolute content-stretch flex flex-col items-start left-1/2 top-[98px]" data-name="Container">
+    <div className="-translate-x-1/2 absolute content-stretch flex flex-col items-start left-1/2 top-[48px]" data-name="Container">
       <NavDesktop />
     </div>
   );
@@ -322,10 +324,10 @@ function Heading() {
     <div className="content-stretch flex flex-col items-center relative shrink-0 w-full" data-name="Heading 1">
       <div className="[word-break:break-word] flex flex-col font-['Libre_Baskerville:Italic',sans-serif] font-normal italic justify-center leading-[0] relative shrink-0 text-[#f5f5f5] text-[80px] text-center tracking-[-2px] whitespace-nowrap">
         <p className="leading-[96px] mb-0">
-          {"Product &".split('').map((c, i) => <span key={i} className="hero-letter" style={{'--i': i + 24} as any}>{c}</span>)}
+          {"Software &".split('').map((c, i) => <span key={i} className="hero-letter" style={{'--i': i + 24} as any}>{c}</span>)}
         </p>
         <p className="leading-[96px]">
-          {"Software Engineer".split('').map((c, i) => <span key={i} className="hero-letter" style={{'--i': i + 33} as any}>{c}</span>)}
+          {"Systems Builder".split('').map((c, i) => <span key={i} className="hero-letter" style={{'--i': i + 34} as any}>{c}</span>)}
         </p>
       </div>
     </div>
@@ -389,7 +391,7 @@ function Container9() {
 
 function HeroContent() {
   return (
-    <div className="-translate-x-1/2 absolute bottom-[4px] content-stretch flex flex-col gap-[40px] items-center left-1/2 w-[891px]" data-name="Hero Content">
+    <div className="-translate-x-1/2 absolute bottom-[64px] content-stretch flex flex-col gap-[40px] items-center left-1/2 w-[891px]" data-name="Hero Content">
       <Title />
       <Container9 />
     </div>
@@ -399,11 +401,11 @@ function HeroContent() {
 function Container10() {
   return (
     <div className="absolute flex h-[312.193px] items-center justify-center left-[-77.27px] top-[-151.99px] w-[286.218px]">
-      <div className="-rotate-25 flex-none">
+    <motion.div drag dragSnapToOrigin whileHover={{ cursor: "grab" }} whileDrag={{ cursor: "grabbing" }} style={{ rotate: -25 }} className="flex-none">
         <div className="content-stretch flex flex-col items-start justify-center relative w-[198.3px]" data-name="Container">
           <RequestsPipelineCard width={198.3} />
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 }
@@ -1067,12 +1069,12 @@ function Container12() {
 
 function Container11() {
   return (
-    <div className="absolute bottom-[-192.88px] flex h-[186.158px] items-center justify-center left-[80.24px] w-[217.104px]">
-      <div className="-rotate-19 flex-none">
+    <div className="absolute bottom-[-95.41px] flex h-[186.158px] items-center justify-center left-[120.24px] w-[217.104px]">
+    <motion.div drag dragSnapToOrigin whileHover={{ cursor: "grab" }} whileDrag={{ cursor: "grabbing" }} style={{ rotate: -19 }} className="flex-none">
         <div className="content-stretch flex flex-col h-[133.671px] items-start justify-center pb-[1.564px] relative w-[183.587px]" data-name="Container">
           <Container12 />
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 }
@@ -2593,31 +2595,31 @@ function Container39() {
 
 function Container38() {
   return (
-    <div className="absolute bottom-[-175.41px] flex h-[169.455px] items-center justify-center left-[749.17px] w-[209.888px]">
-      <div className="flex-none rotate-12">
+    <div className="absolute bottom-[-85.41px] flex h-[169.455px] items-center justify-center left-[709.17px] w-[209.888px]">
+    <motion.div drag dragSnapToOrigin whileHover={{ cursor: "grab" }} whileDrag={{ cursor: "grabbing" }} style={{ rotate: 32 }} className="flex-none">
         <div className="content-stretch flex flex-col h-[133.67px] items-start justify-center relative w-[186.164px]" data-name="Container">
           <Container39 />
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 }
 
 function Container87() {
   return (
-    <div className="absolute flex h-[268.159px] items-center justify-center right-[-50.02px] top-[-114.72px] w-[250.46px]">
-      <div className="flex-none rotate-32">
+    <div className="absolute flex h-[268.159px] items-center justify-center right-[-50.02px] top-[-151.99px] w-[250.46px]">
+    <motion.div drag dragSnapToOrigin whileHover={{ cursor: "grab" }} whileDrag={{ cursor: "grabbing" }} style={{ rotate: 32 }} className="flex-none">
         <div className="content-stretch flex flex-col items-start justify-center relative rounded-[8px] w-[198.3px]" data-name="Container">
           <ControlCenterCard width={198.3} />
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 }
 
 function SectionHero() {
   return (
-    <div className="-translate-x-1/2 -translate-y-1/2 absolute h-[397px] left-1/2 top-1/2 w-[1048px]" data-name="Section - Hero">
+    <div className="-translate-x-1/2 absolute h-[397px] left-1/2 top-[239.67px] w-[1048px]" data-name="Section - Hero">
       {/* <ArcText /> */}
       <HeroContent />
       <Container10 />
